@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_007",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0007",
+  "beneficiary_name": "Priya Robinson",
+  "beneficiary_type": "individual_child",
+  "status": "no_detected_exception",
+  "findings": []
+}

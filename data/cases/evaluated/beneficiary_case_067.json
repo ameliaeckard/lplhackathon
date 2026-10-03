@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_067",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0067",
+  "beneficiary_name": "Priya Singh",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Review Dashboard</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 32px;
+      font-family: Arial, sans-serif;
+      background: #f4f6fa;
+      color: #172033;
+    }
+
+    main { max-width: 1100px; margin: auto; }
+    h1 { margin-bottom: 8px; }
+    .subtitle { color: #64748b; margin-bottom: 28px; }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .metrics .card { margin-bottom: 0; }
+    .metric-label { color: #64748b; }
+    .metric-value { font-size: 32px; margin-top: 10px; font-weight: bold; }
+
+    .table-container { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td {
+      padding: 14px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    th { background: #f8fafc; color: #475569; }
+    .empty { text-align: center; padding: 32px; color: #64748b; }
+
+    h2 { margin-top: 0; font-size: 20px; }
+    label { display: block; margin: 20px 0 8px; font-weight: bold; }
+
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      padding: 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font: inherit;
+      resize: vertical;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 11px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font: inherit;
+      margin-top: 12px;
+    }
+
+    button:hover { background: #1d4ed8; }
+    button:focus-visible, textarea:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 3px;
+    }
+
+    .muted { color: #64748b; }
+    #save-status { margin-left: 12px; color: #166534; }
+
+    @media (max-width: 650px) {
+      body { padding: 16px; }
+      .metrics { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Case Review Dashboard</h1>
+    <p class="subtitle">Review cases, track issues, and understand flags.</p>
+
+    <section class="metrics" aria-label="Review totals">
+      <div class="card">
+        <div class="metric-label">Cases reviewed</div>
+        <div class="metric-value" id="reviewed-count">0</div>
+      </div>
+
+      <div class="card">
+        <div class="metric-label">Needs attention</div>
+        <div class="metric-value" id="attention-count">0</div>
+      </div>
+
+      <div class="card">
+        <div class="metric-label">Human review needed</div>
+        <div class="metric-value" id="human-count">0</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Cases</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Case</th>
+              <th scope="col">Workflow</th>
+              <th scope="col">Client</th>
+              <th scope="col">Status</th>
+              <th scope="col">Issues</th>
+            </tr>
+          </thead>
+          <tbody id="case-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="detail-heading">
+      <h2 id="detail-heading">Case details</h2>
+      <p id="case-detail" class="muted">Select a case to see its details.</p>
+
+      <h3>Why did the case fail or get flagged?</h3>
+      <p id="flag-reason" class="muted">
+        No case selected. Reasons will appear here when available.
+      </p>
+
+      <label for="claude-prompt">Prompt for Claude</label>
+      <textarea
+        id="claude-prompt"
+        placeholder="Explain why this case was flagged. Identify missing documents, conflicting information, and anything requiring human review."
+      ></textarea>
+
+      <button type="button" id="save-prompt">Save prompt</button>
+      <span id="save-status" role="status"></span>
+      <p class="muted">Saved in this browser. No information is sent to Claude.</p>
+    </section>
+  </main>
+
+  <script>
+    // Add your cases here. An empty list keeps all counters at zero.
+    const cases = [];
+
+    // Example case:
+    // {
+    //   id: "death_case_001",
+    //   workflow: "TOD review",
+    //   client: "Maria Thompson",
+    //   status: "Needs attention",
+    //   reviewed: true,
+    //   needsAttention: true,
+    //   humanReviewNeeded: false,
+    //   issues: ["Missing owner signature"],
+    //   reason: "The account owner's signature is missing."
+    // }
+
+    const table = document.getElementById("case-table");
+
+    document.getElementById("reviewed-count").textContent =
+      cases.filter(c => c.reviewed).length;
+
+    document.getElementById("attention-count").textContent =
+      cases.filter(c => c.needsAttention).length;
+
+    document.getElementById("human-count").textContent =
+      cases.filter(c => c.humanReviewNeeded).length;
+
+    function selectCase(c) {
+      document.getElementById("case-detail").textContent =
+        `${c.id} • ${c.workflow} • ${c.client} • ${c.status}`;
+
+      document.getElementById("flag-reason").textContent =
+        c.reason || "No explanation has been recorded.";
+    }
+
+    if (cases.length === 0) {
+      const row = table.insertRow();
+      const cell = row.insertCell();
+      cell.colSpan = 5;
+      cell.className = "empty";
+      cell.textContent = "No cases loaded yet.";
+    } else {
+      cases.forEach(c => {
+        const row = table.insertRow();
+        const caseCell = row.insertCell();
+        const button = document.createElement("button");
+
+        button.textContent = c.id;
+        button.addEventListener("click", () => selectCase(c));
+        caseCell.appendChild(button);
+
+        [
+          c.workflow,
+          c.client,
+          c.status,
+          c.issues.length ? c.issues.join("; ") : "None"
+        ].forEach(value => {
+          row.insertCell().textContent = value;
+        });
+      });
+    }
+
+    const promptBox = document.getElementById("claude-prompt");
+    const saveStatus = document.getElementById("save-status");
+
+    try {
+      promptBox.value = localStorage.getItem("claude-review-prompt") || "";
+    } catch {
+      saveStatus.textContent = "Browser storage is unavailable.";
+    }
+
+    document.getElementById("save-prompt").addEventListener("click", () => {
+      try {
+        localStorage.setItem("claude-review-prompt", promptBox.value);
+        saveStatus.textContent = "Prompt saved.";
+      } catch {
+        saveStatus.textContent = "Unable to save in this browser.";
+      }
+    });
+  </script>
+</body>
+</html>

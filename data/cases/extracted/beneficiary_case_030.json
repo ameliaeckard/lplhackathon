@@ -1,0 +1,110 @@
+{
+  "case_id": "beneficiary_case_030",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0030",
+  "beneficiary_type": "estate",
+  "beneficiary_name": "Estate of Chloe Evans",
+  "representative_name": "Omar Bennett",
+  "representative_capacity": "Executor",
+  "estate_ein": "00-0000030",
+  "estate_ein_status": "present",
+  "destination_account": "DEST0030",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "unknown",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_030",
+      "evidence_text": "Case: beneficiary_case_030",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0030",
+      "evidence_text": "Delivering account: TEST0030",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0030",
+      "evidence_text": "Form field Text[2]: TEST0030",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "estate",
+      "evidence_text": "Beneficiary type: Estate",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Chloe Evans",
+      "evidence_text": "Beneficiary: Estate of Chloe Evans",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Chloe Evans",
+      "evidence_text": "Form field Text[4]: Estate of Chloe Evans",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Omar Bennett",
+      "evidence_text": "Representative: Omar Bennett",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Omar Bennett",
+      "evidence_text": "Form field accountholdername1[0]: Omar Bennett",
+      "page": null
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Executor",
+      "evidence_text": "Capacity: Executor",
+      "page": 6
+    },
+    {
+      "field": "estate_ein",
+      "value": "00-0000030",
+      "evidence_text": "Form field Text[5]: 00-0000030",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0030",
+      "evidence_text": "Form field BeneficiaryIRA[0]: DEST0030",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 shows account holder name Omar Bennett printed and SIMULATED TRAINING SIGNATURE present; form field accountholdername1[0]: Omar Bennett, daterequired1[0]: 10/02/26",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "letters_testamentary_status",
+      "reason": "The document instructs that court-certified Letters Testamentary are required for an estate, but no supporting record confirming their presence or absence is supplied in the case package."
+    }
+  ]
+}

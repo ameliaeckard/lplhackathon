@@ -1,0 +1,129 @@
+{
+  "case_id": "beneficiary_case_055",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0055",
+  "beneficiary_type": "minor",
+  "beneficiary_name": "Fatima Morgan",
+  "representative_name": "Nora Patel",
+  "representative_capacity": "Guardian",
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0055",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "present",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_055",
+      "evidence_text": "Case: beneficiary_case_055",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0055",
+      "evidence_text": "Delivering account: TEST0055",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0055",
+      "evidence_text": "Form field accountno[0]: TEST0055",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "minor",
+      "evidence_text": "Beneficiary type: Child; beneficiary date of birth 08/02/2011 indicating minor status",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "minor",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Fatima Morgan",
+      "evidence_text": "Beneficiary: Fatima Morgan",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Fatima Morgan",
+      "evidence_text": "Form field ssntaxid2[1]: Fatima Morgan",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Nora Patel",
+      "evidence_text": "Guardian: Nora Patel",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Nora Patel",
+      "evidence_text": "Form field accountholdername1[0]: Nora Patel; page 3 signature printed name: Nora Patel",
+      "page": null
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Guardian",
+      "evidence_text": "Appointed guardian: Nora Patel; page 3 signature label: SIMULATED TRAINING SIGNATURE - Guardian",
+      "page": 8
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is minor/child; estate EIN is not applicable",
+      "page": 6
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0055",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0055",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certified death certificate simulated supporting record supplied for case beneficiary_case_055; certification status: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is minor/child, not an estate; letters testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is minor/child, not a trust; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "present",
+      "evidence_text": "Letters of Guardianship simulated supporting record supplied; appointed guardian Nora Patel for minor Fatima Morgan",
+      "page": 8
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary is a US person; country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Signature present on page 3 with printed name Nora Patel and date 10/02/26; label indicates Guardian",
+      "page": 3
+    }
+  ],
+  "uncertainties": []
+}

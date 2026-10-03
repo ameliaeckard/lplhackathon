@@ -1,0 +1,120 @@
+{
+  "case_id": "beneficiary_case_067",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0067",
+  "beneficiary_type": "individual",
+  "beneficiary_name": "Priya Singh",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0067",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_found",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_067",
+      "evidence_text": "Case: beneficiary_case_067",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0067",
+      "evidence_text": "Delivering account: TEST0067",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0067",
+      "evidence_text": "Form field Text[2]: TEST0067 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Priya Singh",
+      "evidence_text": "Beneficiary: Priya Singh",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Priya Singh",
+      "evidence_text": "Form field ssntaxid2[1]: Priya Singh",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0067",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0067",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual (Child), not an estate; letters testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual (Child), not a trust; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary capacity is Individual, not a minor or conservatorship; guardianship document does not apply",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_found",
+      "evidence_text": "Beneficiary US person: No; Country of tax residence: Canada. Form instructions state non-resident aliens must attach IRS Form W-8 BEN, but no W-8 BEN is present in the supplied documents.",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 contains printed name Priya Singh and SIMULATED TRAINING SIGNATURE with date 10/02/26",
+      "page": 3
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Form field accountholdername1[0]: Priya Singh; daterequired1[0]: 10/02/26",
+      "page": null
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative is identified in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative capacity is identified in the document"
+    }
+  ]
+}

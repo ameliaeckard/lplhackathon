@@ -1,0 +1,17 @@
+{
+  "case_id": "beneficiary_case_025",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0025",
+  "beneficiary_name": "Estate of Lucas Reed",
+  "beneficiary_type": "estate",
+  "status": "needs_attention",
+  "findings": [
+    {
+      "code": "MISSING_LETTERS_TESTAMENTARY",
+      "field": "letters_testamentary_status",
+      "severity": "attention",
+      "message": "Court-certified Letters of Testamentary were not found in the case package.",
+      "recommended_action": "Request court-certified Letters of Testamentary from the executor."
+    }
+  ]
+}

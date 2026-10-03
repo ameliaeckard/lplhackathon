@@ -1,0 +1,100 @@
+{
+  "case_id": "beneficiary_case_070",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0070",
+  "beneficiary_type": "individual",
+  "beneficiary_name": "Omar Kim",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0070",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "unknown",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_070",
+      "evidence_text": "Case: beneficiary_case_070",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0070",
+      "evidence_text": "Delivering account: TEST0070",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0070",
+      "evidence_text": "Form field accountno[0]: TEST0070",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Omar Kim",
+      "evidence_text": "Beneficiary: Omar Kim",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Omar Kim",
+      "evidence_text": "Form field ssntaxid2[1]: Omar Kim",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0070",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0070",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Name (print): Omar Kim; Date: 10/02/26; SIMULATED TRAINING SIGNATURE present on page 3",
+      "page": 3
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "unknown",
+      "evidence_text": "Beneficiary identified as US person: No; Country of tax residence: Canada. Form instructions state non-resident aliens must attach IRS Form W-8 BEN, but no W-8 BEN is explicitly confirmed as present or absent in the supplied documents.",
+      "page": 6
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative is identified in the document."
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative capacity is identified in the document."
+    },
+    {
+      "field": "w8_ben_status",
+      "reason": "The beneficiary is identified as a non-US person (country of tax residence: Canada), and form instructions require a W-8 BEN for non-resident aliens, but the supplied document does not explicitly confirm whether a W-8 BEN is present or absent in the package."
+    }
+  ]
+}

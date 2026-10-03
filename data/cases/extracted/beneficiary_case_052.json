@@ -1,0 +1,135 @@
+{
+  "case_id": "beneficiary_case_052",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0052",
+  "beneficiary_type": "child",
+  "beneficiary_name": "Lucas Brooks",
+  "representative_name": "Samuel Evans",
+  "representative_capacity": "Guardian",
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0052",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "present",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_052",
+      "evidence_text": "Case: beneficiary_case_052",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0052",
+      "evidence_text": "Delivering account: TEST0052",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0052",
+      "evidence_text": "Form field accountno[0]: TEST0052",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "child",
+      "evidence_text": "Beneficiary type: Child",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "child",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Lucas Brooks",
+      "evidence_text": "Beneficiary: Lucas Brooks",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Lucas Brooks",
+      "evidence_text": "Form field ssntaxid2[1]: Lucas Brooks",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Samuel Evans",
+      "evidence_text": "Guardian: Samuel Evans",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Samuel Evans",
+      "evidence_text": "Form field accountholdername1[0]: Samuel Evans; page 3 signature block shows Samuel Evans - SIMULATED TRAINING SIGNATURE - Guardian",
+      "page": 3
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Guardian",
+      "evidence_text": "Appointed guardian: Samuel Evans; signature block label: Guardian",
+      "page": 3
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Guardian",
+      "evidence_text": "Letters of Guardianship record: Appointed guardian: Samuel Evans",
+      "page": 8
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child, not an estate; no estate EIN applicable",
+      "page": 6
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0052",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0052",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certified death certificate simulated supporting record present; Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child, not an estate; Letters Testamentary not applicable",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child, not a trust; trust document not applicable",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "present",
+      "evidence_text": "Letters of Guardianship simulated supporting record present; Minor: Lucas Brooks; Appointed guardian: Samuel Evans",
+      "page": 8
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Signature page shows SIMULATED TRAINING SIGNATURE - Guardian with printed name Samuel Evans and date 10/02/26",
+      "page": 3
+    }
+  ],
+  "uncertainties": []
+}

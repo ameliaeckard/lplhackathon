@@ -1,0 +1,126 @@
+{
+  "case_id": "beneficiary_case_089",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0089",
+  "beneficiary_type": "spouse",
+  "beneficiary_name": "Grace Kim",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0089",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_089",
+      "evidence_text": "Case: beneficiary_case_089",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0089",
+      "evidence_text": "Delivering account: TEST0089",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0089",
+      "evidence_text": "Form field Text[2]: TEST0089 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "spouse",
+      "evidence_text": "Beneficiary type: Spouse",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "spouse",
+      "evidence_text": "Form field ssntaxid2[0]: Spouse",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Grace Kim",
+      "evidence_text": "Beneficiary: Grace Kim",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Grace Kim",
+      "evidence_text": "Form field ssntaxid2[1]: Grace Kim",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Grace Kim",
+      "evidence_text": "Account Holder Name (print): Grace Kim",
+      "page": 3
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0089",
+      "evidence_text": "Form field AccountNumber2[0]: DEST0089",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certified death certificate simulated supporting record present; Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is spouse (individual), not an estate; letters testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is spouse (individual), not a trust; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is spouse (individual), not a minor or conservatorship; guardianship document does not apply",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States. Page 3 signature section states: I certify that I am a US person (including US resident Alien) unless I have attached an IRS Form W-8 BEN.",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 contains Account Holder Signature with printed name Grace Kim and simulated training signature notation; form field accountholdername1[0]: Grace Kim; daterequired1[0]: 10/02/26",
+      "page": 3
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is spouse (individual), not an estate; estate EIN does not apply",
+      "page": 6
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual spouse acting on her own behalf; no representative is identified in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual spouse acting on her own behalf; no representative capacity is identified in the document"
+    }
+  ]
+}

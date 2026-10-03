@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_054",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0054",
+  "beneficiary_name": "Henry Santos",
+  "beneficiary_type": "child",
+  "status": "no_detected_exception",
+  "findings": []
+}

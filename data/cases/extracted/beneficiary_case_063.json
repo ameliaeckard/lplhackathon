@@ -1,0 +1,118 @@
+{
+  "case_id": "beneficiary_case_063",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0063",
+  "beneficiary_type": "individual_child",
+  "beneficiary_name": "Aisha Chen",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0063",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "unknown",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_063",
+      "evidence_text": "Case: beneficiary_case_063",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0063",
+      "evidence_text": "Delivering account: TEST0063",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0063",
+      "evidence_text": "Form field Text[2]: TEST0063 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual_child",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "Child",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Aisha Chen",
+      "evidence_text": "Beneficiary: Aisha Chen",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Aisha Chen",
+      "evidence_text": "Form field ssntaxid2[1]: Aisha Chen",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0063",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0063",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual child, not an estate; letters testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual child, not a trust; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary date of birth 04/10/1983; no indication of minor or conservatorship status",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Name (print): Aisha Chen; Date: 10/02/26; SIMULATED TRAINING SIGNATURE present on page 3",
+      "page": 3
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "unknown",
+      "evidence_text": "Beneficiary identified as US person: No; Country of tax residence: Canada. Form page 1 states non-resident aliens must attach IRS Form W-8 BEN. No W-8 BEN document is explicitly confirmed as present in the supplied package.",
+      "page": 6
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative identified in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative capacity identified in the document"
+    },
+    {
+      "field": "w8_ben_status",
+      "reason": "Beneficiary is identified as a non-US person (country of tax residence: Canada), which triggers a W-8 BEN requirement per the form instructions, but no W-8 BEN document is explicitly confirmed as present or absent in the supplied case package"
+    }
+  ]
+}

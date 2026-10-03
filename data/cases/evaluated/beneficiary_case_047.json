@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_047",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0047",
+  "beneficiary_name": "Garcia Family Trust",
+  "beneficiary_type": "trust",
+  "status": "no_detected_exception",
+  "findings": []
+}

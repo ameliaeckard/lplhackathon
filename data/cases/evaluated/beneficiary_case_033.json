@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_033",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0033",
+  "beneficiary_name": "Estate of Isaac Patel",
+  "beneficiary_type": "estate",
+  "status": "no_detected_exception",
+  "findings": []
+}

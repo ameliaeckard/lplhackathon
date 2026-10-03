@@ -1,0 +1,108 @@
+{
+  "case_id": "beneficiary_case_018",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0018",
+  "beneficiary_type": "individual_child",
+  "beneficiary_name": "Arjun Clark",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0018",
+  "death_certificate_status": "not_found",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_018",
+      "evidence_text": "Case: beneficiary_case_018",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0018",
+      "evidence_text": "Delivering Account Number field: TEST0018",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual_child",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Arjun Clark",
+      "evidence_text": "Beneficiary: Arjun Clark",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Arjun Clark",
+      "evidence_text": "Form field ssntaxid2[1]: Arjun Clark (beneficiary name)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Arjun Clark",
+      "evidence_text": "Account Holder Name (print) on signature page: Arjun Clark",
+      "page": 3
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0018",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0018",
+      "page": null
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not a trust",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual); no indication of minor or conservatorship",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Signature page contains printed name Arjun Clark, date 10/02/26, and SIMULATED TRAINING SIGNATURE notation",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary type is individual child; no representative is identified in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary type is individual child; no representative capacity is identified in the document"
+    }
+  ]
+}

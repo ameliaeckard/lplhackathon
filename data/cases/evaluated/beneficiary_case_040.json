@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_040",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0040",
+  "beneficiary_name": "Estate of Priya Singh",
+  "beneficiary_type": "estate",
+  "status": "no_detected_exception",
+  "findings": []
+}

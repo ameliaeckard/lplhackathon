@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_068",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0068",
+  "beneficiary_name": "Noah Bennett",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

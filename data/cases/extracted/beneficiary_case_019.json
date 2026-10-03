@@ -1,0 +1,108 @@
+{
+  "case_id": "beneficiary_case_019",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0019",
+  "beneficiary_type": "individual_child",
+  "beneficiary_name": "Nora Ahmed",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0019",
+  "death_certificate_status": "not_found",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_019",
+      "evidence_text": "Case: beneficiary_case_019",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0019",
+      "evidence_text": "Delivering Account Number field: TEST0019",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual_child",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Nora Ahmed",
+      "evidence_text": "Beneficiary: Nora Ahmed",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Nora Ahmed",
+      "evidence_text": "Form field ssntaxid2[1]: Nora Ahmed (beneficiary name section)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Nora Ahmed",
+      "evidence_text": "Account Holder Name (print) on signature page: Nora Ahmed",
+      "page": 3
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0019",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0019",
+      "page": null
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not a trust",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary capacity is Individual; no minor or conservatorship indicated",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Signature present with printed name Nora Ahmed and date 10/02/26; page also contains SIMULATED TRAINING SIGNATURE notation",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative name appears in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative capacity appears in the document"
+    }
+  ]
+}

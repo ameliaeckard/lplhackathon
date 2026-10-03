@@ -1,0 +1,17 @@
+{
+  "case_id": "beneficiary_case_028",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0028",
+  "beneficiary_name": "Estate of Fatima Clark",
+  "beneficiary_type": "estate",
+  "status": "unable_to_determine",
+  "findings": [
+    {
+      "code": "REVIEW_LETTERS_TESTAMENTARY",
+      "field": "letters_testamentary_status",
+      "severity": "review",
+      "message": "Resolve could not determine whether Letters of Testamentary are present.",
+      "recommended_action": "Review the package for court-certified Letters of Testamentary."
+    }
+  ]
+}

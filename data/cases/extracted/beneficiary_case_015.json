@@ -1,0 +1,96 @@
+{
+  "case_id": "beneficiary_case_015",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0015",
+  "beneficiary_type": "individual_child",
+  "beneficiary_name": "Fatima Reed",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0015",
+  "death_certificate_status": "not_found",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_015",
+      "evidence_text": "Case: beneficiary_case_015",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0015",
+      "evidence_text": "Delivering Account Number field: TEST0015",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual_child",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Fatima Reed",
+      "evidence_text": "Beneficiary name field: Fatima Reed",
+      "page": null
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate; estate EIN does not apply",
+      "page": 6
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0015",
+      "evidence_text": "IRAAccount2 form field value: DEST0015",
+      "page": null
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate; letters testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not a trust; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary is an adult individual (date of birth 04/16/1985); no guardianship or conservatorship indicated",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary is a US person; country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Name printed as Fatima Reed with SIMULATED TRAINING SIGNATURE and date 10/02/26",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative name appears in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative capacity appears in the document"
+    }
+  ]
+}

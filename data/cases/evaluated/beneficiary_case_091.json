@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_091",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0091",
+  "beneficiary_name": "Elena Reed",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

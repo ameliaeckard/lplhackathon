@@ -1,0 +1,102 @@
+{
+  "case_id": "beneficiary_case_062",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0062",
+  "beneficiary_type": "individual",
+  "beneficiary_name": "James Williams",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0062",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_found",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_062",
+      "evidence_text": "Case: beneficiary_case_062",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0062",
+      "evidence_text": "Delivering account: TEST0062",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0062",
+      "evidence_text": "Form field accountno[0]: TEST0062",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Williams",
+      "evidence_text": "Beneficiary: James Williams",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Williams",
+      "evidence_text": "Form field ssntaxid2[1]: James Williams",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Williams",
+      "evidence_text": "Form field accountholdername1[0]: James Williams",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0062",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0062",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_found",
+      "evidence_text": "Beneficiary identified as US person: No, country of tax residence: Canada; no W-8 BEN document found in the supplied case package",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 contains printed name James Williams, SIMULATED TRAINING SIGNATURE, and date 10/02/26",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative name appears in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative capacity appears in the document"
+    }
+  ]
+}

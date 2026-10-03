@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_085",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0085",
+  "beneficiary_name": "Sofia Walker",
+  "beneficiary_type": "spouse",
+  "status": "no_detected_exception",
+  "findings": []
+}

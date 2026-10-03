@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_059",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0059",
+  "beneficiary_name": "Nora Thompson",
+  "beneficiary_type": "child",
+  "status": "no_detected_exception",
+  "findings": []
+}

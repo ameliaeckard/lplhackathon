@@ -1,0 +1,17 @@
+{
+  "case_id": "beneficiary_case_017",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0017",
+  "beneficiary_name": "Chloe Morgan",
+  "beneficiary_type": "child",
+  "status": "needs_attention",
+  "findings": [
+    {
+      "code": "MISSING_DEATH_CERTIFICATE",
+      "field": "death_certificate_status",
+      "severity": "attention",
+      "message": "A certified death certificate was not found in the case package.",
+      "recommended_action": "Request a certified copy of the death certificate."
+    }
+  ]
+}

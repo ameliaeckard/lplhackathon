@@ -1,0 +1,123 @@
+{
+  "case_id": "beneficiary_case_049",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0049",
+  "beneficiary_type": "trust",
+  "beneficiary_name": "Singh Family Trust",
+  "representative_name": "Grace Bennett",
+  "representative_capacity": "Trustee",
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0049",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_found",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_049",
+      "evidence_text": "Case: beneficiary_case_049",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0049",
+      "evidence_text": "Delivering account: TEST0049",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0049",
+      "evidence_text": "Form field Text[2]: TEST0049",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "trust",
+      "evidence_text": "Beneficiary type: Trust",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Singh Family Trust",
+      "evidence_text": "Beneficiary: Singh Family Trust",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Singh Family Trust",
+      "evidence_text": "Form field Text[4]: Singh Family Trust",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Grace Bennett",
+      "evidence_text": "Representative: Grace Bennett",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Grace Bennett",
+      "evidence_text": "Form field Text[0] and accountholdername1[0]: Grace Bennett",
+      "page": null
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Trustee",
+      "evidence_text": "Capacity: Trustee",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Trust, not Estate; estate EIN requirement does not apply",
+      "page": 6
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0049",
+      "evidence_text": "Form field BeneficiaryIRA[0]: DEST0049",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Trust, not Estate; Letters Testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_found",
+      "evidence_text": "Beneficiary type is Trust; no trust document is present in the supplied case package",
+      "page": null
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Trust, not a minor or conservatorship; guardianship document does not apply",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 shows 'SIMULATED TRAINING SIGNATURE' with printed name Grace Bennett and form field accountholdername1[0]: Grace Bennett, daterequired1[0]: 10/02/26",
+      "page": 3
+    }
+  ],
+  "uncertainties": []
+}

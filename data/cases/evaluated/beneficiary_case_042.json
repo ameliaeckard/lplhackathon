@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_042",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0042",
+  "beneficiary_name": "Patel Family Trust",
+  "beneficiary_type": "trust",
+  "status": "no_detected_exception",
+  "findings": []
+}

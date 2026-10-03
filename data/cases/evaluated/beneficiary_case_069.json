@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_069",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0069",
+  "beneficiary_name": "Grace Hassan",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

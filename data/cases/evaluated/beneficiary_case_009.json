@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_009",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0009",
+  "beneficiary_name": "Grace Walker",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

@@ -1,0 +1,96 @@
+{
+  "case_id": "beneficiary_case_017",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0017",
+  "beneficiary_type": "child",
+  "beneficiary_name": "Chloe Morgan",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0017",
+  "death_certificate_status": "not_found",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_017",
+      "evidence_text": "Case: beneficiary_case_017",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0017",
+      "evidence_text": "Delivering Account Number field: TEST0017",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "child",
+      "evidence_text": "Beneficiary type: Child (intake record page 6 and form field ssntaxid2[0]: Child)",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Chloe Morgan",
+      "evidence_text": "Beneficiary name field: Chloe Morgan",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0017",
+      "evidence_text": "IRAAccount2[0] form field value: DEST0017",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "not_found",
+      "evidence_text": "No death certificate is present in the supplied document package; instructions on page 1 state a certified copy is required but no certificate document appears.",
+      "page": 1
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate; Letters Testamentary do not apply.",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not a trust; trust document does not apply.",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child with date of birth 06/18/1987; intake record lists capacity as Individual, not a minor or conservatorship.",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "Intake record states US person: Yes and Country of tax residence: United States; page 3 signature section certifies beneficiary is a US person and no W-8 BEN is attached.",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Name (print): Chloe Morgan with SIMULATED TRAINING SIGNATURE notation and date 10/02/26 on page 3.",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary type is Child / Individual; no representative is identified in the document."
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary type is Child / Individual; no representative capacity is identified in the document."
+    }
+  ]
+}

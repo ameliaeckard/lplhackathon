@@ -1,0 +1,104 @@
+{
+  "case_id": "beneficiary_case_028",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0028",
+  "beneficiary_type": "estate",
+  "beneficiary_name": "Estate of Fatima Clark",
+  "representative_name": "Noah Walker",
+  "representative_capacity": "Executor",
+  "estate_ein": "00-0000028",
+  "estate_ein_status": "present",
+  "destination_account": "DEST0028",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "unknown",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_028",
+      "evidence_text": "Case: beneficiary_case_028",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0028",
+      "evidence_text": "Delivering account: TEST0028",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0028",
+      "evidence_text": "Form field Text[2]: TEST0028 (delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "estate",
+      "evidence_text": "Beneficiary type: Estate",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Fatima Clark",
+      "evidence_text": "Beneficiary: Estate of Fatima Clark",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Fatima Clark",
+      "evidence_text": "Form field Text[4]: Estate of Fatima Clark (Name of Trust, Estate, or other Entity)",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Noah Walker",
+      "evidence_text": "Representative: Noah Walker",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Noah Walker",
+      "evidence_text": "Form field Text[0]: Noah Walker (account holder name on signature page)",
+      "page": null
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Executor",
+      "evidence_text": "Capacity: Executor",
+      "page": 6
+    },
+    {
+      "field": "estate_ein",
+      "value": "00-0000028",
+      "evidence_text": "Form field Text[5]: 00-0000028 (Tax Identification Number TIN-EIN for estate)",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0028",
+      "evidence_text": "Form field BeneficiaryIRA[0]: DEST0028 (destination beneficiary IRA account number)",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 shows printed name Noah Walker and SIMULATED TRAINING SIGNATURE with date 10/02/26 in form field daterequired1[0]",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "letters_testamentary_status",
+      "reason": "The document instructions require court-certified Letters Testamentary for an estate, but no supporting record confirming the letters testamentary are present or absent was supplied in the case package."
+    }
+  ]
+}

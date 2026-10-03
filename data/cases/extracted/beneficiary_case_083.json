@@ -1,0 +1,126 @@
+{
+  "case_id": "beneficiary_case_083",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0083",
+  "beneficiary_type": "spouse",
+  "beneficiary_name": "Aisha Robinson",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0083",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_083",
+      "evidence_text": "Case: beneficiary_case_083",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0083",
+      "evidence_text": "Delivering account: TEST0083",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0083",
+      "evidence_text": "Form field Text[2]: TEST0083 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "spouse",
+      "evidence_text": "Beneficiary type: Spouse",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "spouse",
+      "evidence_text": "Form field ssntaxid2[0]: Spouse",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Aisha Robinson",
+      "evidence_text": "Beneficiary: Aisha Robinson",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Aisha Robinson",
+      "evidence_text": "Form field ssntaxid2[1]: Aisha Robinson",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Aisha Robinson",
+      "evidence_text": "Form field accountholdername1[0]: Aisha Robinson",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0083",
+      "evidence_text": "Form field AccountNumber2[0]: DEST0083",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Spouse (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Spouse (individual), not a trust",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Spouse (individual), not a minor or conservatorship",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Spouse (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Name (print): Aisha Robinson; Date: 10/02/26; SIMULATED TRAINING SIGNATURE present on page 3",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual spouse acting on her own behalf; no representative name appears in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual spouse acting on her own behalf; no representative capacity appears in the document"
+    }
+  ]
+}

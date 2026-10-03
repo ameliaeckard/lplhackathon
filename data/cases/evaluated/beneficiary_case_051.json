@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_051",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0051",
+  "beneficiary_name": "Elena Kim",
+  "beneficiary_type": "minor",
+  "status": "no_detected_exception",
+  "findings": []
+}

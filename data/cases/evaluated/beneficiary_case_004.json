@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_004",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0004",
+  "beneficiary_name": "Daniel Nguyen",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

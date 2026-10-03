@@ -1,0 +1,17 @@
+{
+  "case_id": "beneficiary_case_080",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0080",
+  "beneficiary_name": "Isaac Patel",
+  "beneficiary_type": "individual",
+  "status": "needs_attention",
+  "findings": [
+    {
+      "code": "MISSING_SIGNATURE",
+      "field": "signature_status",
+      "severity": "attention",
+      "message": "A completed signature was not found on the beneficiary form.",
+      "recommended_action": "Request a completed signed beneficiary claim form."
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "case_id": "beneficiary_case_027",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0027",
+  "beneficiary_type": "estate",
+  "beneficiary_name": "Estate of Henry Morgan",
+  "representative_name": "Priya Garcia",
+  "representative_capacity": "Executor",
+  "estate_ein": "00-0000027",
+  "estate_ein_status": "present",
+  "destination_account": "DEST0027",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_found",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_027",
+      "evidence_text": "Case: beneficiary_case_027",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0027",
+      "evidence_text": "Delivering account: TEST0027",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0027",
+      "evidence_text": "Form field Text[2]: TEST0027 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "estate",
+      "evidence_text": "Beneficiary type: Estate",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Henry Morgan",
+      "evidence_text": "Beneficiary: Estate of Henry Morgan",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Henry Morgan",
+      "evidence_text": "Form field Text[4]: Estate of Henry Morgan (Name of Trust, Estate, or other Entity)",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Priya Garcia",
+      "evidence_text": "Representative: Priya Garcia",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Priya Garcia",
+      "evidence_text": "Form field Text[0]: Priya Garcia (account holder name)",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Priya Garcia",
+      "evidence_text": "Form field accountholdername1[0]: Priya Garcia (signature section printed name)",
+      "page": null
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Executor",
+      "evidence_text": "Capacity: Executor",
+      "page": 6
+    },
+    {
+      "field": "estate_ein",
+      "value": "00-0000027",
+      "evidence_text": "Form field Text[5]: 00-0000027 (Tax Identification Number TIN-EIN for estate)",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0027",
+      "evidence_text": "Form field BeneficiaryIRA[0]: DEST0027 (LPL Beneficiary IRA account number for transfer)",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 contains printed name Priya Garcia and date 10/02/26 in signature section, with notation SIMULATED TRAINING SIGNATURE",
+      "page": 3
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_038",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0038",
+  "beneficiary_name": "Estate of Sofia Garcia",
+  "beneficiary_type": "estate",
+  "status": "no_detected_exception",
+  "findings": []
+}

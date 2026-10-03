@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_088",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0088",
+  "beneficiary_name": "Noah Hassan",
+  "beneficiary_type": "spouse",
+  "status": "no_detected_exception",
+  "findings": []
+}

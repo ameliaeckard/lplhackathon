@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_055",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0055",
+  "beneficiary_name": "Fatima Morgan",
+  "beneficiary_type": "minor",
+  "status": "no_detected_exception",
+  "findings": []
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_096",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0096",
+  "beneficiary_name": "Samuel Evans",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

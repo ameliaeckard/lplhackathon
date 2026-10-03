@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_097",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0097",
+  "beneficiary_name": "Chloe Thompson",
+  "beneficiary_type": "individual_child",
+  "status": "no_detected_exception",
+  "findings": []
+}

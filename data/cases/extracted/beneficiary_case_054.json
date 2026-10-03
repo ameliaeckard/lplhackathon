@@ -1,0 +1,135 @@
+{
+  "case_id": "beneficiary_case_054",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0054",
+  "beneficiary_type": "child",
+  "beneficiary_name": "Henry Santos",
+  "representative_name": "Arjun Rivera",
+  "representative_capacity": "Guardian",
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0054",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "present",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_054",
+      "evidence_text": "Case: beneficiary_case_054",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0054",
+      "evidence_text": "Delivering account: TEST0054",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0054",
+      "evidence_text": "Form field Text[2]: TEST0054 (Delivering Account Number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "child",
+      "evidence_text": "Beneficiary type: Child",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "child",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Henry Santos",
+      "evidence_text": "Beneficiary: Henry Santos",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Henry Santos",
+      "evidence_text": "Form field ssntaxid2[1]: Henry Santos",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Arjun Rivera",
+      "evidence_text": "Guardian: Arjun Rivera",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Arjun Rivera",
+      "evidence_text": "Form field accountholdername1[0]: Arjun Rivera",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Arjun Rivera",
+      "evidence_text": "Page 3 signature area: Arjun Rivera, SIMULATED TRAINING SIGNATURE - Guardian",
+      "page": 3
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Guardian",
+      "evidence_text": "Appointed guardian: Arjun Rivera; page 3 signature label: SIMULATED TRAINING SIGNATURE - Guardian",
+      "page": 8
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0054",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0054",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certified death certificate - simulated supporting record; Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "present",
+      "evidence_text": "Letters of Guardianship - simulated supporting record; Appointed guardian: Arjun Rivera; Authority: Guardian may act for this minor in the simulated case",
+      "page": 8
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child, not an estate; letters testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child, not a trust; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 contains signature of Arjun Rivera dated 10/02/26 with label SIMULATED TRAINING SIGNATURE - Guardian; form field daterequired1[0]: 10/02/26",
+      "page": 3
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child, not an estate; estate EIN does not apply",
+      "page": 6
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,123 @@
+{
+  "case_id": "beneficiary_case_002",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0002",
+  "beneficiary_type": "individual",
+  "beneficiary_name": "James Rivera",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0002",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_002",
+      "evidence_text": "Case: beneficiary_case_002",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0002",
+      "evidence_text": "Delivering account: TEST0002",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0002",
+      "evidence_text": "Form field Text[2]: TEST0002 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Form field ssntaxid2[0]: Child (relationship to decedent field)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Rivera",
+      "evidence_text": "Beneficiary: James Rivera",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Rivera",
+      "evidence_text": "Form field ssntaxid2[1]: James Rivera",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Rivera",
+      "evidence_text": "Form field accountholdername1[0]: James Rivera (account holder signature name)",
+      "page": null
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual (Child); estate EIN not applicable",
+      "page": 6
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0002",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0002",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual (Child), not an estate; letters testamentary not applicable",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual (Child), not a trust; trust document not applicable",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual (Child) with date of birth 03/03/1972; no guardianship or conservatorship indicated",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 contains printed name James Rivera and simulated signature with date 10/02/26",
+      "page": 3
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Form field accountholdername1[0]: James Rivera; daterequired1[0]: 10/02/26",
+      "page": null
+    }
+  ],
+  "uncertainties": []
+}

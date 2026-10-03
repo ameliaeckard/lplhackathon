@@ -1,0 +1,102 @@
+{
+  "case_id": "beneficiary_case_012",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0012",
+  "beneficiary_type": "individual_child",
+  "beneficiary_name": "Lucas Hassan",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0012",
+  "death_certificate_status": "not_found",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_012",
+      "evidence_text": "Case: beneficiary_case_012",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0012",
+      "evidence_text": "Form field Text[2]: TEST0012 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0012",
+      "evidence_text": "Form field accountno[0]: TEST0012",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual_child",
+      "evidence_text": "Beneficiary type: Child (synthetic intake record, page 6); form field ssntaxid2[0]: Child",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Lucas Hassan",
+      "evidence_text": "Beneficiary: Lucas Hassan (synthetic intake record, page 6); form field ssntaxid2[1]: Lucas Hassan; form field accountholdername1[0]: Lucas Hassan",
+      "page": 6
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0012",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0012",
+      "page": null
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 contains printed name Lucas Hassan and SIMULATED TRAINING SIGNATURE with date field accountholdername1[0]: Lucas Hassan, daterequired1[0]: 10/02/26",
+      "page": 3
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "Synthetic intake record states US person: Yes, Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not a trust",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child; synthetic intake record states Capacity: Individual and date of birth 01/13/1982, no minor or conservatorship indicated",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary type is individual child acting in their own capacity; no representative name appears in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary type is individual child acting in their own capacity; no representative capacity appears in the document"
+    }
+  ]
+}

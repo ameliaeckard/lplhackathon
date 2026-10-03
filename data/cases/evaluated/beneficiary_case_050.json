@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_050",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0050",
+  "beneficiary_name": "Bennett Family Trust",
+  "beneficiary_type": "trust",
+  "status": "no_detected_exception",
+  "findings": []
+}

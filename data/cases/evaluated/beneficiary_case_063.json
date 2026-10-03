@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_063",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0063",
+  "beneficiary_name": "Aisha Chen",
+  "beneficiary_type": "individual_child",
+  "status": "no_detected_exception",
+  "findings": []
+}

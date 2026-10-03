@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_082",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0082",
+  "beneficiary_name": "James Chen",
+  "beneficiary_type": "spouse",
+  "status": "no_detected_exception",
+  "findings": []
+}

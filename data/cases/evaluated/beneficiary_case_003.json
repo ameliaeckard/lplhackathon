@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_003",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0003",
+  "beneficiary_name": "Aisha Patel",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

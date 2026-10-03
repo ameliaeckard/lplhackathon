@@ -1,0 +1,117 @@
+{
+  "case_id": "beneficiary_case_098",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0098",
+  "beneficiary_type": "individual",
+  "beneficiary_name": "Arjun Rivera",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0098",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_098",
+      "evidence_text": "Case: beneficiary_case_098",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0098",
+      "evidence_text": "Delivering account: TEST0098",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0098",
+      "evidence_text": "Form field Text[2]: TEST0098 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Form field ssntaxid2[0]: Child (relationship to decedent field)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Arjun Rivera",
+      "evidence_text": "Beneficiary: Arjun Rivera",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Arjun Rivera",
+      "evidence_text": "Form field ssntaxid2[1]: Arjun Rivera",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0098",
+      "evidence_text": "Form field AccountNumber2[0]: DEST0098",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account holder name printed: Arjun Rivera; date: 10/02/26; SIMULATED TRAINING SIGNATURE present on page 3",
+      "page": 3
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Form field accountholdername1[0]: Arjun Rivera; daterequired1[0]: 10/02/26",
+      "page": null
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual child, not an estate",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual child, not a trust",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary capacity is individual; no minor or conservatorship indicated",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is individual child, not an estate",
+      "page": 6
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_046",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0046",
+  "beneficiary_name": "Robinson Family Trust",
+  "beneficiary_type": "trust",
+  "status": "no_detected_exception",
+  "findings": []
+}

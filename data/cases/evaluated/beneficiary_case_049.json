@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_049",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0049",
+  "beneficiary_name": "Singh Family Trust",
+  "beneficiary_type": "trust",
+  "status": "no_detected_exception",
+  "findings": []
+}

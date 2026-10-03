@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_052",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0052",
+  "beneficiary_name": "Lucas Brooks",
+  "beneficiary_type": "child",
+  "status": "no_detected_exception",
+  "findings": []
+}

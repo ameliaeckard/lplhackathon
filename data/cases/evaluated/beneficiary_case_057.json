@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_057",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0057",
+  "beneficiary_name": "Chloe Ahmed",
+  "beneficiary_type": "minor",
+  "status": "no_detected_exception",
+  "findings": []
+}

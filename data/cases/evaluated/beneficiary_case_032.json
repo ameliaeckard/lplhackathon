@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_032",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0032",
+  "beneficiary_name": "Estate of Nora Rivera",
+  "beneficiary_type": "estate",
+  "status": "no_detected_exception",
+  "findings": []
+}

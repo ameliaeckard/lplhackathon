@@ -1,0 +1,129 @@
+{
+  "case_id": "beneficiary_case_056",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0056",
+  "beneficiary_type": "minor",
+  "beneficiary_name": "Samuel Clark",
+  "representative_name": "Isaac Nguyen",
+  "representative_capacity": "Guardian",
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0056",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "present",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_056",
+      "evidence_text": "Case: beneficiary_case_056",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0056",
+      "evidence_text": "Delivering account: TEST0056",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0056",
+      "evidence_text": "Form field accountno[0]: TEST0056",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "minor",
+      "evidence_text": "Beneficiary type: Child; Minor: Samuel Clark with date of birth 09/03/2012",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "minor",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Samuel Clark",
+      "evidence_text": "Beneficiary: Samuel Clark",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Samuel Clark",
+      "evidence_text": "Form field ssntaxid2[1]: Samuel Clark",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Isaac Nguyen",
+      "evidence_text": "Guardian: Isaac Nguyen",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Isaac Nguyen",
+      "evidence_text": "Form field accountholdername1[0]: Isaac Nguyen; page 3 signature printed name: Isaac Nguyen",
+      "page": null
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Guardian",
+      "evidence_text": "Appointed guardian: Isaac Nguyen; page 3 signature label: SIMULATED TRAINING SIGNATURE - Guardian",
+      "page": 8
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0056",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0056",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certified death certificate simulated supporting record present; Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "present",
+      "evidence_text": "Letters of Guardianship simulated supporting record present; Appointed guardian: Isaac Nguyen; Authority: Guardian may act for this minor in the simulated case",
+      "page": 8
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is minor/child, not an estate; letters testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is minor/child, not a trust; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Signature section on page 3 contains printed name Isaac Nguyen with label SIMULATED TRAINING SIGNATURE - Guardian and date 10/02/26",
+      "page": 3
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is minor/child, not an estate; estate EIN does not apply",
+      "page": 6
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,129 @@
+{
+  "case_id": "beneficiary_case_038",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0038",
+  "beneficiary_type": "estate",
+  "beneficiary_name": "Estate of Sofia Garcia",
+  "representative_name": "Arjun Ahmed",
+  "representative_capacity": "Executor",
+  "estate_ein": "00-0000038",
+  "estate_ein_status": "present",
+  "destination_account": "DEST0038",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "present",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_038",
+      "evidence_text": "Case: beneficiary_case_038",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0038",
+      "evidence_text": "Delivering account: TEST0038",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0038",
+      "evidence_text": "Form field Text[2]: TEST0038",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "estate",
+      "evidence_text": "Beneficiary type: Estate",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Sofia Garcia",
+      "evidence_text": "Beneficiary: Estate of Sofia Garcia",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Sofia Garcia",
+      "evidence_text": "Form field Text[4]: Estate of Sofia Garcia",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Arjun Ahmed",
+      "evidence_text": "Representative: Arjun Ahmed",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Arjun Ahmed",
+      "evidence_text": "Form field accountholdername1[0]: Arjun Ahmed",
+      "page": null
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Executor",
+      "evidence_text": "Capacity: Executor",
+      "page": 6
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Executor",
+      "evidence_text": "Appointed executor: Arjun Ahmed",
+      "page": 8
+    },
+    {
+      "field": "estate_ein",
+      "value": "00-0000038",
+      "evidence_text": "Form field Text[5]: 00-0000038",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0038",
+      "evidence_text": "Form field BeneficiaryIRA[0]: DEST0038",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "present",
+      "evidence_text": "Court certification in simulated case: Court-certified letters supplied",
+      "page": 8
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Estate; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Estate; guardianship document does not apply",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 shows printed name Arjun Ahmed and notation SIMULATED TRAINING SIGNATURE; form field accountholdername1[0]: Arjun Ahmed with date 10/02/26",
+      "page": 3
+    }
+  ],
+  "uncertainties": []
+}

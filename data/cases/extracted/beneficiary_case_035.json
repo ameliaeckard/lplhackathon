@@ -1,0 +1,111 @@
+{
+  "case_id": "beneficiary_case_035",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0035",
+  "beneficiary_type": "estate",
+  "beneficiary_name": "Estate of James Williams",
+  "representative_name": "Fatima Santos",
+  "representative_capacity": "Executor",
+  "estate_ein": "00-0000035",
+  "estate_ein_status": "present",
+  "destination_account": "DEST0035",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "present",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_035",
+      "evidence_text": "Case: beneficiary_case_035",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0035",
+      "evidence_text": "Delivering account: TEST0035",
+      "page": 7
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "estate",
+      "evidence_text": "Beneficiary type: Estate",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of James Williams",
+      "evidence_text": "Name of Trust, Estate, or other Entity form field: Estate of James Williams",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Fatima Santos",
+      "evidence_text": "Representative: Fatima Santos; form field accountholdername1[0]: Fatima Santos",
+      "page": 6
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Executor",
+      "evidence_text": "Capacity: Executor",
+      "page": 6
+    },
+    {
+      "field": "estate_ein",
+      "value": "00-0000035",
+      "evidence_text": "Tax Identification Number (TIN-EIN) form field: 00-0000035",
+      "page": null
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "present",
+      "evidence_text": "Tax Identification Number (TIN-EIN) form field value 00-0000035 present for Estate of James Williams",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0035",
+      "evidence_text": "BeneficiaryIRA form field: DEST0035",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "present",
+      "evidence_text": "Court certification in simulated case: Court-certified letters supplied; Appointed executor: Fatima Santos",
+      "page": 8
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Estate; trust document does not apply",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Estate; guardianship document does not apply",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Name (print): Fatima Santos; Date: 10/02/26; SIMULATED TRAINING SIGNATURE present on page 3",
+      "page": 3
+    }
+  ],
+  "uncertainties": []
+}

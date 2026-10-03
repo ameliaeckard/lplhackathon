@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>C.A.R.D | Case Automatic Review Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="util"><div><span id="connection" class="connection">Checking Resolve API…</span></div></div>
+  <nav class="nav" aria-label="Primary"><div>
+    <span class="brand">r'Solv</span>
+    <ul>
+      <li><button type="button" data-nav="dashboard">Dashboard</button></li>
+      <li><button type="button" data-nav="cases">Cases</button></li>
+      <li><button type="button" data-nav="reports">Reports</button></li>
+      <li><button type="button" data-nav="settings">Settings</button></li>
+    </ul>
+  </div></nav>
+  <div class="hero"><div>
+    <div class="eyebrow">Case Automatic Review Dashboard</div>
+    <h1>C.A.R.D</h1>
+    <p class="subtitle" id="sub">Upload a beneficiary PDF to run live Claude extraction, deterministic checks, and the saved XGBoost model.</p>
+  </div></div>
+</header>
+
+<main>
+  <div class="view" data-view="dashboard">
+    <section class="card" aria-labelledby="upload-heading">
+      <h2 id="upload-heading">Analyze a beneficiary claim</h2>
+      <p class="muted">PDFs are sent to the live Resolve backend. The upload is processed temporarily and is not used to retrain the model.</p>
+      <form id="upload-form">
+        <div class="upload-row">
+          <input id="pdf-file" name="file" type="file" accept="application/pdf,.pdf" required aria-label="Choose beneficiary PDF">
+          <button id="analyze-btn" class="cta" type="submit">Analyze PDF</button>
+        </div>
+        <p id="upload-status" class="upload-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="metrics" aria-label="Review totals">
+      <button type="button" class="metric" data-goto="All"><div class="metric-label">Cases analyzed</div><div class="metric-value" id="reviewed-count">0</div><small>View all →</small></button>
+      <button type="button" class="metric" data-goto="Needs Attention"><div class="metric-label">Needs attention</div><div class="metric-value" id="attention-count">0</div><small>View these →</small></button>
+      <button type="button" class="metric" data-goto="Human review"><div class="metric-label">Human review needed</div><div class="metric-value" id="human-count">0</div><small>View these →</small></button>
+    </section>
+
+    <section class="card" style="margin-top:24px">
+      <h2>Needs attention</h2>
+      <div class="table-container"><table>
+        <thead><tr><th scope="col">Case</th><th scope="col">Workflow</th><th scope="col">Beneficiary / Entity</th><th scope="col">Status</th><th scope="col">Issues</th></tr></thead>
+        <tbody id="dash-table"></tbody>
+      </table></div>
+    </section>
+  </div>
+
+  <div class="view" data-view="cases" hidden>
+    <section class="card">
+      <h2>Analyzed cases</h2>
+      <div class="tools">
+        <input type="search" id="q" placeholder="Search by case, beneficiary or workflow  ( / )" aria-label="Search cases">
+        <div class="seg" id="filters" role="group" aria-label="Filter cases"></div>
+      </div>
+      <div class="table-container"><table>
+        <thead><tr>
+          <th scope="col" data-col="case_id"><button class="sort" type="button" data-sort="case_id">Case</button></th>
+          <th scope="col" data-col="workflow"><button class="sort" type="button" data-sort="workflow">Workflow</button></th>
+          <th scope="col" data-col="client"><button class="sort" type="button" data-sort="client">Beneficiary / Entity</button></th>
+          <th scope="col" data-col="status"><button class="sort" type="button" data-sort="status">Status</button></th>
+          <th scope="col" data-col="issues"><button class="sort" type="button" data-sort="issues">Issues</button></th>
+        </tr></thead>
+        <tbody id="case-table"></tbody>
+      </table></div>
+    </section>
+  </div>
+
+  <div class="view" data-view="reports" hidden>
+    <div class="grid2">
+      <section class="card"><h2>Cases by status</h2><div class="bars" id="by-status"></div></section>
+      <section class="card"><h2>Cases by workflow</h2><div class="bars" id="by-workflow"></div></section>
+    </div>
+    <section class="card"><h2>Most common issues</h2><div class="bars" id="by-issue"></div></section>
+  </div>
+
+  <div class="view" data-view="settings" hidden>
+    <section class="card">
+      <h2>Settings</h2>
+      <div class="set-row"><b>Theme</b><p class="muted">Light is the default.</p>
+        <div class="seg" role="group" aria-label="Theme">
+          <button type="button" data-theme-pick="light">Light</button>
+          <button type="button" data-theme-pick="dark">Dark</button>
+          <button type="button" data-theme-pick="system">Match device</button>
+        </div></div>
+      <div class="set-row"><b>Resolve API</b><p class="muted" id="api-location"></p><button type="button" class="cta ghost" id="check-api">Check connection</button></div>
+      <div class="set-row"><b>Live case history</b><p class="muted">Clears only cases analyzed through the live dashboard. Training PDFs, datasets, and the trained model are untouched.</p><button type="button" class="cta ghost" id="clear-cases">Clear analyzed cases</button></div>
+      <div class="set-row"><b>Keyboard shortcuts</b><p class="muted"><kbd>/</kbd> search cases &nbsp; <kbd>1</kbd>–<kbd>4</kbd> switch pages &nbsp; <kbd>Esc</kbd> leave a field</p></div>
+    </section>
+  </div>
+
+  <section class="card view" data-view="dashboard cases" aria-labelledby="detail-heading" style="margin-top:24px" id="detail-card" hidden>
+    <h2 id="detail-heading">Case details</h2>
+    <div id="case-detail" class="muted">Analyze or select a case to see its details.</div>
+    <div class="btns" style="margin-top:18px">
+      <button type="button" class="cta ghost" id="mark-reviewed" disabled>Mark reviewed</button>
+    </div>
+  </section>
+</main>
+
+<footer><div>
+  <p>Live results from the Resolve backend. No sample case data is embedded in this frontend.</p>
+  <p>Hackathon prototype. Styling inspired by LPL Financial's public website; not an official LPL product.</p>
+</div></footer>
+<div id="toast" role="status"></div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

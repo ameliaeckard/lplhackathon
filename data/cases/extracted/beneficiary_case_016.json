@@ -1,0 +1,102 @@
+{
+  "case_id": "beneficiary_case_016",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0016",
+  "beneficiary_type": "child",
+  "beneficiary_name": "Samuel Santos",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0016",
+  "death_certificate_status": "not_found",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_016",
+      "evidence_text": "Case: beneficiary_case_016",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0016",
+      "evidence_text": "Delivering Account Number field: TEST0016",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "child",
+      "evidence_text": "Beneficiary type: Child (synthetic intake record); form field ssntaxid2[0]: Child",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Samuel Santos",
+      "evidence_text": "Beneficiary name field: Samuel Santos; confirmed on page 3 signature and intake record",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0016",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0016",
+      "page": null
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Name (print): Samuel Santos; Date: 10/02/26; SIMULATED TRAINING SIGNATURE present on page 3",
+      "page": 3
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary is a US person per intake record: US person: Yes, Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not a trust",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child with date of birth 05/17/1986; intake record capacity listed as Individual, not a minor or conservatorship",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "not_found",
+      "evidence_text": "No death certificate is present in the supplied document package",
+      "page": null
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary type is Child (individual); no representative is identified in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary type is Child (individual); no representative capacity is identified in the document"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "beneficiary_case_012",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0012",
+  "beneficiary_name": "Lucas Hassan",
+  "beneficiary_type": "individual_child",
+  "status": "needs_attention",
+  "findings": [
+    {
+      "code": "MISSING_DEATH_CERTIFICATE",
+      "field": "death_certificate_status",
+      "severity": "attention",
+      "message": "A certified death certificate was not found in the case package.",
+      "recommended_action": "Request a certified copy of the death certificate."
+    }
+  ]
+}

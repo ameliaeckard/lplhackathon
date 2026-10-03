@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_031",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0031",
+  "beneficiary_name": "Estate of Arjun Thompson",
+  "beneficiary_type": "estate",
+  "status": "no_detected_exception",
+  "findings": []
+}

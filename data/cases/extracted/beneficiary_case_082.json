@@ -1,0 +1,126 @@
+{
+  "case_id": "beneficiary_case_082",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0082",
+  "beneficiary_type": "spouse",
+  "beneficiary_name": "James Chen",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0082",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_082",
+      "evidence_text": "Case: beneficiary_case_082",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0082",
+      "evidence_text": "Delivering account: TEST0082",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0082",
+      "evidence_text": "Form field Text[2]: TEST0082 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "spouse",
+      "evidence_text": "Beneficiary type: Spouse",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "spouse",
+      "evidence_text": "Form field ssntaxid2[0]: Spouse (relationship to decedent)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Chen",
+      "evidence_text": "Beneficiary: James Chen",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Chen",
+      "evidence_text": "Form field ssntaxid2[1]: James Chen",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "James Chen",
+      "evidence_text": "Form field accountholdername1[0]: James Chen (account holder name printed on signature page)",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0082",
+      "evidence_text": "Form field AccountNumber2[0]: DEST0082",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certified death certificate simulated supporting record present; Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 contains SIMULATED TRAINING SIGNATURE with printed name James Chen and date 10/02/26",
+      "page": 3
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is spouse (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is spouse (individual), not a trust",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is spouse (individual), not a minor or conservatorship",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is spouse (individual), not an estate",
+      "page": 6
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual spouse; no representative is identified in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual spouse; no representative capacity is identified in the document"
+    }
+  ]
+}

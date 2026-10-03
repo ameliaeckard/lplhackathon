@@ -1,0 +1,105 @@
+{
+  "case_id": "beneficiary_case_053",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0053",
+  "beneficiary_type": "minor",
+  "beneficiary_name": "Mei Reed",
+  "representative_name": "Chloe Thompson",
+  "representative_capacity": "Guardian",
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0053",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "present",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_053",
+      "evidence_text": "Case: beneficiary_case_053",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0053",
+      "evidence_text": "Delivering account: TEST0053",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0053",
+      "evidence_text": "Form field accountno[0]: TEST0053",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "minor",
+      "evidence_text": "Beneficiary type: Child; Date of birth: 06/27/2014",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "minor",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Mei Reed",
+      "evidence_text": "Beneficiary: Mei Reed",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Mei Reed",
+      "evidence_text": "Form field ssntaxid2[1]: Mei Reed",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Chloe Thompson",
+      "evidence_text": "Guardian: Chloe Thompson",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Chloe Thompson",
+      "evidence_text": "Form field accountholdername1[0]: Chloe Thompson; page 3 signature line reads 'SIMULATED TRAINING SIGNATURE - Guardian'",
+      "page": 3
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Guardian",
+      "evidence_text": "Appointed guardian: Chloe Thompson; signature annotation reads 'SIMULATED TRAINING SIGNATURE - Guardian'",
+      "page": 3
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0053",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0053",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certified death certificate - simulated supporting record; Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "present",
+      "evidence_text": "Letters of Guardianship - simulated supporting record; Appointed guardian: Chloe Thompson; Minor: Mei Reed",
+      "page": 8
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Form field accountholdername1[0]: Chloe Thompson; daterequired1[0]: 10/02/26; page 3 signature annotation: 'SIMULATED TRAINING SIGNATURE - Guardian'",
+      "page": 3
+    }
+  ],
+  "uncertainties": []
+}

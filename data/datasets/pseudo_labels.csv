@@ -1,0 +1,9 @@
+case_id,beneficiary_type,estate_ein_status,death_certificate_status,letters_testamentary_status,trust_document_status,guardianship_document_status,w8_ben_status,signature_status,destination_account_present,unknown_field_count,pseudo_probability,needs_attention
+beneficiary_case_079,individual,not_applicable,present,not_applicable,not_applicable,not_applicable,not_applicable,not_found,1,0,0.7785685,1
+beneficiary_case_075,individual,not_applicable,present,not_applicable,not_applicable,not_applicable,not_applicable,not_found,1,0,0.7785685,1
+beneficiary_case_077,individual,not_applicable,present,not_applicable,not_applicable,not_applicable,not_applicable,not_found,1,0,0.7785685,1
+beneficiary_case_076,individual,not_applicable,present,not_applicable,not_applicable,not_applicable,not_applicable,not_found,1,0,0.7785685,1
+beneficiary_case_011,individual,not_applicable,not_found,not_applicable,not_applicable,not_applicable,not_applicable,present,1,0,0.20756035,0
+beneficiary_case_062,individual,not_applicable,present,not_applicable,not_applicable,not_applicable,not_found,present,1,0,0.20756035,0
+beneficiary_case_067,individual,not_applicable,present,not_applicable,not_applicable,not_applicable,not_found,present,1,0,0.20756035,0
+beneficiary_case_005,individual,not_applicable,present,not_applicable,not_applicable,not_applicable,not_applicable,present,1,0,0.20756035,0

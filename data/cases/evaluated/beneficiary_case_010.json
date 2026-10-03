@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_010",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0010",
+  "beneficiary_name": "Omar Singh",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

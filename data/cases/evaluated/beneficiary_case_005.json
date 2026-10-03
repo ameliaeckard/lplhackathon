@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_005",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0005",
+  "beneficiary_name": "Sofia Williams",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

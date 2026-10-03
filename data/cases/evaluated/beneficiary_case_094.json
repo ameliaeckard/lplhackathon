@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_094",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0094",
+  "beneficiary_name": "Henry Clark",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

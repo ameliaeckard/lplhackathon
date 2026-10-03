@@ -1,0 +1,123 @@
+{
+  "case_id": "beneficiary_case_046",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0046",
+  "beneficiary_type": "trust",
+  "beneficiary_name": "Robinson Family Trust",
+  "representative_name": "Ethan Garcia",
+  "representative_capacity": "Trustee",
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0046",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_found",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_046",
+      "evidence_text": "Case: beneficiary_case_046",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0046",
+      "evidence_text": "Delivering account: TEST0046",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0046",
+      "evidence_text": "Form field Text[2]: TEST0046",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "trust",
+      "evidence_text": "Beneficiary type: Trust",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Robinson Family Trust",
+      "evidence_text": "Beneficiary: Robinson Family Trust",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Robinson Family Trust",
+      "evidence_text": "Form field Text[4]: Robinson Family Trust",
+      "page": null
+    },
+    {
+      "field": "representative_name",
+      "value": "Ethan Garcia",
+      "evidence_text": "Representative: Ethan Garcia",
+      "page": 6
+    },
+    {
+      "field": "representative_name",
+      "value": "Ethan Garcia",
+      "evidence_text": "Form field accountholdername1[0]: Ethan Garcia",
+      "page": null
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Trustee",
+      "evidence_text": "Capacity: Trustee",
+      "page": 6
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0046",
+      "evidence_text": "Form field BeneficiaryIRA[0]: DEST0046",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Trust, not Estate; letters testamentary do not apply",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_found",
+      "evidence_text": "No trust document is present in the supplied case package; form instructions note a complete copy of the Trust is required but no such document appears in the record",
+      "page": 1
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Trust, not a minor or conservatorship; guardianship document does not apply",
+      "page": 6
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "US person: Yes; Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Page 3 shows 'Ethan Garcia' printed as account holder name and 'SIMULATED TRAINING SIGNATURE' with date 10/02/26",
+      "page": 3
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Trust, not Estate; estate EIN does not apply",
+      "page": 6
+    }
+  ],
+  "uncertainties": []
+}

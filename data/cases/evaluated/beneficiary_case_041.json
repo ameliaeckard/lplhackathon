@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_041",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0041",
+  "beneficiary_name": "Rivera Family Trust",
+  "beneficiary_type": "trust",
+  "status": "no_detected_exception",
+  "findings": []
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_043",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0043",
+  "beneficiary_name": "Nguyen Family Trust",
+  "beneficiary_type": "trust",
+  "status": "no_detected_exception",
+  "findings": []
+}

@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_099",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0099",
+  "beneficiary_name": "Nora Patel",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

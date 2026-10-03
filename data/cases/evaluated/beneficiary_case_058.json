@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_058",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0058",
+  "beneficiary_name": "Arjun Evans",
+  "beneficiary_type": "child",
+  "status": "no_detected_exception",
+  "findings": []
+}

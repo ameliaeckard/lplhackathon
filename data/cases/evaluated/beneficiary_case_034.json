@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_034",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0034",
+  "beneficiary_name": "Estate of Maria Nguyen",
+  "beneficiary_type": "estate",
+  "status": "no_detected_exception",
+  "findings": []
+}

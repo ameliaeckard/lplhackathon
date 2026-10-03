@@ -1,0 +1,108 @@
+{
+  "case_id": "beneficiary_case_014",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0014",
+  "beneficiary_type": "individual_child",
+  "beneficiary_name": "Henry Brooks",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0014",
+  "death_certificate_status": "not_found",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "not_applicable",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_014",
+      "evidence_text": "Case: beneficiary_case_014",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0014",
+      "evidence_text": "Form field Text[2]: TEST0014 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual_child",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Henry Brooks",
+      "evidence_text": "Beneficiary intake record: Beneficiary: Henry Brooks",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Henry Brooks",
+      "evidence_text": "Form field ssntaxid2[1]: Henry Brooks (beneficiary name in Section 2A)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Henry Brooks",
+      "evidence_text": "Account Holder Name (print) on signature page: Henry Brooks",
+      "page": 3
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0014",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0014 (destination LPL Beneficiary IRA account number)",
+      "page": null
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary intake record states US person: Yes, Country of tax residence: United States",
+      "page": 6
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not a trust",
+      "page": 6
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary is an individual with date of birth 03/15/1984; no minor or conservatorship indicated",
+      "page": 6
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence_text": "Beneficiary type is Child (individual), not an estate",
+      "page": 6
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Signature page shows Account Holder Name: Henry Brooks, Date: 10/02/26, with SIMULATED TRAINING SIGNATURE notation",
+      "page": 3
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary type is individual child with no representative indicated in the document"
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary type is individual child with no representative capacity indicated in the document"
+    }
+  ]
+}

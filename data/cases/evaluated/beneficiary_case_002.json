@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_002",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0002",
+  "beneficiary_name": "James Rivera",
+  "beneficiary_type": "individual",
+  "status": "no_detected_exception",
+  "findings": []
+}

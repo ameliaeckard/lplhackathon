@@ -1,0 +1,100 @@
+{
+  "case_id": "beneficiary_case_068",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0068",
+  "beneficiary_type": "individual",
+  "beneficiary_name": "Noah Bennett",
+  "representative_name": null,
+  "representative_capacity": null,
+  "estate_ein": null,
+  "estate_ein_status": "not_applicable",
+  "destination_account": "DEST0068",
+  "death_certificate_status": "present",
+  "letters_testamentary_status": "not_applicable",
+  "trust_document_status": "not_applicable",
+  "guardianship_document_status": "not_applicable",
+  "w8_ben_status": "unknown",
+  "signature_status": "present",
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_068",
+      "evidence_text": "Case: beneficiary_case_068",
+      "page": 6
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0068",
+      "evidence_text": "Delivering account: TEST0068",
+      "page": 7
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0068",
+      "evidence_text": "Form field Text[2]: TEST0068 (deceased IRA owner delivering account number)",
+      "page": null
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Beneficiary type: Child; Capacity: Individual",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence_text": "Form field ssntaxid2[0]: Child",
+      "page": null
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Noah Bennett",
+      "evidence_text": "Beneficiary: Noah Bennett",
+      "page": 6
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Noah Bennett",
+      "evidence_text": "Form field ssntaxid2[1]: Noah Bennett",
+      "page": null
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0068",
+      "evidence_text": "Form field IRAAccount2[0]: DEST0068",
+      "page": null
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence_text": "Certification status in simulated case: Certified copy supplied",
+      "page": 7
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence_text": "Account Holder Name (print): Noah Bennett; Date: 10/02/26; SIMULATED TRAINING SIGNATURE present on page 3",
+      "page": 3
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "unknown",
+      "evidence_text": "Beneficiary identified as US person: No; Country of tax residence: Canada. Form instructions state non-resident aliens must attach IRS Form W-8 BEN, but the document does not confirm whether a W-8 BEN is present in the package.",
+      "page": 6
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "representative_name",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative name is present in the document."
+    },
+    {
+      "field": "representative_capacity",
+      "reason": "Beneficiary is an individual acting on their own behalf; no representative capacity is present in the document."
+    },
+    {
+      "field": "w8_ben_status",
+      "reason": "The beneficiary is identified as a non-US person with country of tax residence Canada. The form instructions require a W-8 BEN for non-resident aliens, but the document does not confirm whether a W-8 BEN form is included in the package."
+    }
+  ]
+}

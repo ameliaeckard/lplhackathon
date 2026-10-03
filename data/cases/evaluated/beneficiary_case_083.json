@@ -1,0 +1,9 @@
+{
+  "case_id": "beneficiary_case_083",
+  "workflow_type": "beneficiary_claim",
+  "account_number": "TEST0083",
+  "beneficiary_name": "Aisha Robinson",
+  "beneficiary_type": "spouse",
+  "status": "no_detected_exception",
+  "findings": []
+}
