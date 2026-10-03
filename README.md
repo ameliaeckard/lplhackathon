@@ -1,79 +1,72 @@
-R'SOLV FULL LIVE-SYSTEM UPDATE — NO DATA
-========================================
+# R'Solv
 
-This is the source overlay to merge into /workshop.
+R'Solv is an AI-powered exception review tool for beneficiary claim processing.
 
-PRESERVED ON PURPOSE
---------------------
-This package does NOT include or delete /workshop/data/.
+## What it does
 
-It also does NOT replace your trained ML work. Keep your existing:
-  /workshop/ml/model_features.py
-  /workshop/ml/models/resolve_model.joblib
-  /workshop/ml/models/metrics.json
-  plus any training/build scripts already in /workshop/ml/.
+R'Solv:
 
-KEEP YOUR WORKING CONFIG.JS
----------------------------
-This package contains frontend/config.example.js, but NOT frontend/config.js.
-That is intentional. Keep the config.js that already points at your working
-AWS forwarded backend URL.
+- Reads beneficiary claim PDFs with Claude through Amazon Bedrock
+- Extracts structured case information
+- Checks explicit requirements with deterministic rules
+- Runs an XGBoost model as a secondary signal
+- Shows when the rules and ML model disagree
+- Keeps a human reviewer in control
 
-WHAT IS INCLUDED
-----------------
-- R'Solv startup branding
-- C.A.R.D. = Case. Automatic. Review. Dashboard.
-- browser-side PDF compression BEFORE Flask
-- ~0.35 MB best-effort transport target
-- real upload progress
-- local browser PDF libraries after setup
-- Claude text/form extraction + visual fallback
-- deterministic beneficiary rules
-- saved XGBoost secondary signal
-- rules/ML disagreement callout
-- Evidence -> Fact -> Rule -> Result trace
-- "What would clear this implemented exception?" preview
-- human review workflow:
-    Awaiting Review
-    Follow-up Required
-    Ready to Continue
-    Return to Review Queue
-- optional reviewer note
-- timestamped review history
-- backend request IDs + stage logs
-- vertical Info pipeline
-- Flexbox-based layout
+## How it works
 
-INSTALL
--------
-1. Merge this folder into /workshop.
-2. Do NOT delete /workshop/data.
-3. Do NOT delete your existing ml/model_features.py or ml/models/.
-4. Do NOT overwrite your working frontend/config.js.
-5. Run:
+```text
+PDF
+↓
+Claude / Amazon Bedrock
+↓
+Structured case facts
+↓
+Deterministic rules + XGBoost
+↓
+Case result and explanation
+↓
+Human review
+```
 
-   cd /workshop
-   bash setup.sh
+The LLM understands the document.
 
-6. Restart backend:
+The deterministic rules check explicit requirements.
 
-   python3 backend/app.py
+The ML model runs alongside the rules as an additional signal.
 
-7. If your frontend server on port 5500 is already running, leave it alone
-   and refresh the browser. Otherwise:
+## C.A.R.D.
 
-   python3 -m http.server 5500 --directory frontend
+R'Solv is powered by **C.A.R.D.**
 
-IMPORTANT LANGUAGE
-------------------
-C.A.R.D. does not label claims "approved" or "compliant."
+**Case. Automatic. Review. Dashboard.**
 
-Deterministic case status:
-  Needs Attention
-  No Detected Exception
-  Unable to Determine
+## Technology
 
-Human review is an operational outcome:
-  Awaiting Review
-  Follow-up Required
-  Ready to Continue
+- Python
+- Flask
+- JavaScript
+- Amazon Bedrock
+- Claude
+- XGBoost
+- HTML / CSS
+
+## Run the project
+
+Backend:
+
+```bash
+cd /workshop
+python3 backend/app.py
+```
+
+Frontend:
+
+```bash
+cd /workshop
+python3 -m http.server 5506 --directory frontend
+```
+
+## Note
+
+R'Solv is a hackathon prototype. It does not make legal or financial approval decisions. Humans remain in control of review decisions.
