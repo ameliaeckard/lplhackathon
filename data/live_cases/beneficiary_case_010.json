@@ -1,0 +1,151 @@
+{
+  "case_id": "beneficiary_case_010",
+  "workflow_type": "beneficiary_claim",
+  "workflow": "Beneficiary Claim",
+  "account_number": "TEST0010",
+  "beneficiary_name": "Omar Singh",
+  "client": "Omar Singh",
+  "status_code": "no_detected_exception",
+  "status": "No Detected Exception",
+  "decision_source": "deterministic_rules",
+  "human_review": true,
+  "issues": [],
+  "issue_codes": [],
+  "reason": "No exception was detected by the implemented deterministic checks.",
+  "summary": "R'Solv reviewed Omar Singh's individual beneficiary claim and detected no exception under the implemented checks; however, the destination account (DEST0010) is flagged as an unresolved field because it appears to be a synthetic test value per the document footer notation, and real account validity cannot be confirmed from this package alone.",
+  "summary_next_step": "Obtain and verify a confirmed, valid destination account for Omar Singh before advancing this claim to disbursement.",
+  "summary_source": "claude_with_fallback",
+  "findings": [],
+  "recommended_actions": [],
+  "ml": {
+    "prediction": "no_detected_exception",
+    "model_score": 0.1421,
+    "score_note": "Experimental model score from the controlled synthetic training set. It is not a calibrated probability of real-world workflow failure.",
+    "agreement": true
+  },
+  "extraction": {
+    "beneficiary_type": "individual",
+    "beneficiary_name": "Omar Singh",
+    "representative_name": null,
+    "representative_capacity": null,
+    "nonresident_alien": false,
+    "estate_ein_status": "not_applicable",
+    "destination_account": "DEST0010",
+    "destination_account_present": true,
+    "death_certificate_status": "present",
+    "letters_testamentary_status": "not_applicable",
+    "trust_document_status": "not_applicable",
+    "guardianship_document_status": "not_applicable",
+    "w8_ben_status": "not_applicable",
+    "signature_status": "present"
+  },
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_010",
+      "evidence": "Beneficiary intake record states 'Case: beneficiary_case_010'"
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0010",
+      "evidence": "Delivering Account Number field on page 1 shows TEST0010; confirmed on pages 2 and 3 footer"
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual",
+      "evidence": "Intake record states 'Capacity: Individual'; beneficiary completed Section A (natural person) on the claim form"
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Omar Singh",
+      "evidence": "Section 2A Name field shows 'Omar Singh'; confirmed in intake record and signature block"
+    },
+    {
+      "field": "representative_name",
+      "value": null,
+      "evidence": "No trustee, executor, or guardian name entered; Section B left blank"
+    },
+    {
+      "field": "representative_capacity",
+      "value": null,
+      "evidence": "Section B (trust/estate/entity) is blank; no representative capacity indicated"
+    },
+    {
+      "field": "nonresident_alien",
+      "value": "false",
+      "evidence": "Intake record states 'US person: Yes' and 'Country of tax residence: United States'; signature certifies US person status"
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence": "Claimant is an individual spouse beneficiary; no estate entity involved"
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0010",
+      "evidence": "Option B Scenario 1 on page 2 shows destination account entered as 'DEST0010'"
+    },
+    {
+      "field": "destination_account_present",
+      "value": "true",
+      "evidence": "Account number DEST0010 entered in Option B Scenario 1 destination field"
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence": "Simulated death certificate record present in package; states 'Certification status in simulated case: Certified copy supplied' for decedent Chloe Evans"
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence": "Claimant is an individual spouse, not an estate executor; no letters testamentary required"
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence": "No trust entity involved; Section B trust fields left blank"
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence": "Claimant is an adult individual; no minor or conservatorship indicated"
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence": "Beneficiary confirmed as US person; W-8 BEN not required"
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence": "Page 3 signature section shows signed 'Omar Singh' with printed name 'Omar Singh' and date '10/03/26'"
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "destination_account",
+      "label": "Destination Account",
+      "reason": "Destination account DEST0010 appears to be a synthetic test value per document footer notation; real account validity cannot be confirmed from this package alone"
+    }
+  ],
+  "document_notes": [],
+  "decision_trace": [],
+  "resolution_preview": [],
+  "analysis_run_id": "20261003T153152_922357Z_e7a0a8",
+  "filename": "beneficiary_case_010.pdf",
+  "upload": {
+    "original_mb": 4.91,
+    "transport_mb": 0.31,
+    "compression_mode": "browser_raster",
+    "target_mb": 0.35,
+    "download_url": "/cases/beneficiary_case_010/transport",
+    "archived_transport": "data/live_cases/transport_history/beneficiary_case_010/20261003T153152_922357Z_e7a0a8.pdf"
+  },
+  "analyzed_at": "2026-10-03T15:31:52.923766+00:00",
+  "request_id": "f9672a79",
+  "review_history": [],
+  "review_note": null,
+  "reviewed": false,
+  "reviewed_at": null,
+  "review_status": "awaiting_review"
+}

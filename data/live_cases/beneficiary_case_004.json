@@ -1,0 +1,187 @@
+{
+  "case_id": "beneficiary_case_004",
+  "workflow_type": "beneficiary_claim",
+  "workflow": "Beneficiary Claim",
+  "account_number": "TEST0004",
+  "beneficiary_name": "Estate of Elena Brooks",
+  "client": "Estate of Elena Brooks",
+  "status_code": "needs_attention",
+  "status": "Needs Attention",
+  "decision_source": "deterministic_rules",
+  "human_review": true,
+  "issues": [
+    "Estate beneficiary is missing court-certified Letters of Testamentary."
+  ],
+  "issue_codes": [
+    "MISSING_LETTERS_TESTAMENTARY"
+  ],
+  "reason": "Estate beneficiary is missing court-certified Letters of Testamentary.",
+  "summary": "The claim for Estate of Elena Brooks requires attention: court-certified Letters Testamentary are not present in the submitted package, which is a blocking item for estate claims, and the destination account on file is a synthetic test value that cannot be confirmed as a valid account from the documents provided.",
+  "summary_next_step": "Request court-certified Letters Testamentary from the executor and verify the destination account details before advancing the claim.",
+  "summary_source": "claude_with_fallback",
+  "findings": [
+    {
+      "code": "MISSING_LETTERS_TESTAMENTARY",
+      "severity": "blocking",
+      "message": "Estate beneficiary is missing court-certified Letters of Testamentary.",
+      "recommended_action": "Request or verify court-certified Letters of Testamentary.",
+      "field": "letters_testamentary_status"
+    }
+  ],
+  "recommended_actions": [
+    "Request or verify court-certified Letters of Testamentary."
+  ],
+  "ml": {
+    "prediction": "needs_attention",
+    "model_score": 0.6388,
+    "score_note": "Experimental model score from the controlled synthetic training set. It is not a calibrated probability of real-world workflow failure.",
+    "agreement": true
+  },
+  "extraction": {
+    "beneficiary_type": "estate",
+    "beneficiary_name": "Estate of Elena Brooks",
+    "representative_name": "Daniel Nguyen",
+    "representative_capacity": "Executor",
+    "nonresident_alien": false,
+    "estate_ein_status": "present",
+    "destination_account": "DEST0004",
+    "destination_account_present": true,
+    "death_certificate_status": "present",
+    "letters_testamentary_status": "not_found",
+    "trust_document_status": "not_applicable",
+    "guardianship_document_status": "not_applicable",
+    "w8_ben_status": "not_applicable",
+    "signature_status": "present"
+  },
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_004",
+      "evidence": "Beneficiary intake record states 'Case: beneficiary_case_004'"
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0004",
+      "evidence": "Delivering Account Number field on page 1 shows TEST0004; confirmed on pages 2 and 3 footer"
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "estate",
+      "evidence": "Section 2B completed: 'Name of Trust, Estate, or other Entity: Estate of Elena Brooks'; intake record states 'Beneficiary type: Estate'"
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Elena Brooks",
+      "evidence": "Section 2B field 'Name of Trust, Estate, or other Entity' reads 'Estate of Elena Brooks'"
+    },
+    {
+      "field": "representative_name",
+      "value": "Daniel Nguyen",
+      "evidence": "Section 2B 'Name of Trustee(s), Executor, Administrator, Custodian, etc.' reads 'Daniel Nguyen'; confirmed in signature block page 3"
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Executor",
+      "evidence": "Intake record states 'Capacity: Executor'; Daniel Nguyen listed under Executor/Administrator field in Section 2B"
+    },
+    {
+      "field": "nonresident_alien",
+      "value": "false",
+      "evidence": "Intake record states 'US person: Yes' and 'Country of tax residence: United States'"
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "present",
+      "evidence": "Section 2B Tax Identification Number (TIN-EIN) field shows '00-0000004'"
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0004",
+      "evidence": "Option A Scenario 2 on page 2 shows transfer to 'LPL Beneficiary IRA account DEST0004'"
+    },
+    {
+      "field": "destination_account_present",
+      "value": "true",
+      "evidence": "Option A Scenario 2 selected with destination account number DEST0004 entered"
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence": "Simulated death certificate page present in package; certification status noted as 'Certified copy supplied'"
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_found",
+      "evidence": "Estate claim requires court-certified Letters of Testamentary per form instructions; no such document found in the package"
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence": "Beneficiary is an estate, not a trust; trust document not required"
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence": "No minor or conservatorship involved; beneficiary is an estate"
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence": "Representative confirmed as US person; W-8 BEN not required"
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence": "Page 3 signature section shows signed 'Daniel Nguyen' with printed name 'Daniel Nguyen' and date '10/03/26'"
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "letters_testamentary_status",
+      "label": "Letters Testamentary Status",
+      "reason": "Form instructions require court-certified Letters of Testamentary for estate claims; no such document is present in the supplied package, but absence may reflect an incomplete submission rather than inapplicability"
+    },
+    {
+      "field": "destination_account",
+      "label": "Destination Account",
+      "reason": "Destination account value 'DEST0004' is a synthetic test value; real account validity cannot be confirmed from the document alone"
+    }
+  ],
+  "document_notes": [],
+  "decision_trace": [
+    {
+      "code": "MISSING_LETTERS_TESTAMENTARY",
+      "field": "letters_testamentary_status",
+      "fact_value": "not_found",
+      "evidence": "Estate claim requires court-certified Letters of Testamentary per form instructions; no such document found in the package",
+      "rule": "Estate beneficiary requires court-certified Letters of Testamentary.",
+      "result": "Estate beneficiary is missing court-certified Letters of Testamentary."
+    }
+  ],
+  "resolution_preview": [
+    {
+      "code": "MISSING_LETTERS_TESTAMENTARY",
+      "field": "letters_testamentary_status",
+      "title": "Estate beneficiary is missing court-certified Letters of Testamentary.",
+      "current_label": "Letters Testamentary",
+      "current_value": "Not Found",
+      "change_description": "If verified documentation changes letters testamentary to Present, this specific missing-document rule would no longer trigger.",
+      "effect": "Preview only. Other implemented requirements may still require attention, and this does not approve the claim."
+    }
+  ],
+  "filename": "beneficiary_case_004.pdf",
+  "upload": {
+    "original_mb": 4.91,
+    "transport_mb": 0.31,
+    "compression_mode": "browser_raster",
+    "target_mb": 0.35,
+    "download_url": "/cases/beneficiary_case_004/transport"
+  },
+  "analyzed_at": "2026-10-03T15:16:16.377540+00:00",
+  "request_id": "2e063ac8",
+  "review_history": [],
+  "review_note": null,
+  "review_status": "awaiting_review",
+  "reviewed": false,
+  "reviewed_at": null
+}

@@ -1,0 +1,187 @@
+{
+  "case_id": "beneficiary_case_006",
+  "workflow_type": "beneficiary_claim",
+  "workflow": "Beneficiary Claim",
+  "account_number": "TEST0006",
+  "beneficiary_name": "Estate of Mei Santos",
+  "client": "Estate of Mei Santos",
+  "status_code": "needs_attention",
+  "status": "Needs Attention",
+  "decision_source": "deterministic_rules",
+  "human_review": true,
+  "issues": [
+    "Estate beneficiary is missing court-certified Letters of Testamentary."
+  ],
+  "issue_codes": [
+    "MISSING_LETTERS_TESTAMENTARY"
+  ],
+  "reason": "Estate beneficiary is missing court-certified Letters of Testamentary.",
+  "summary": "The claim for Estate of Mei Santos is flagged for attention due to a blocking issue: court-certified Letters of Testamentary are missing from the submitted package, which is required documentation for estate beneficiary claims. Additionally, the destination account ('DEST0006') is unresolved, as it appears to be a synthetic test value and cannot be confirmed as a valid account from the current documentation.",
+  "summary_next_step": "Request or verify court-certified Letters of Testamentary from the Executor, and confirm the validity of the destination account before the claim can proceed.",
+  "summary_source": "claude_with_fallback",
+  "findings": [
+    {
+      "code": "MISSING_LETTERS_TESTAMENTARY",
+      "severity": "blocking",
+      "message": "Estate beneficiary is missing court-certified Letters of Testamentary.",
+      "recommended_action": "Request or verify court-certified Letters of Testamentary.",
+      "field": "letters_testamentary_status"
+    }
+  ],
+  "recommended_actions": [
+    "Request or verify court-certified Letters of Testamentary."
+  ],
+  "ml": {
+    "prediction": "needs_attention",
+    "model_score": 0.6388,
+    "score_note": "Experimental model score from the controlled synthetic training set. It is not a calibrated probability of real-world workflow failure.",
+    "agreement": true
+  },
+  "extraction": {
+    "beneficiary_type": "estate",
+    "beneficiary_name": "Estate of Mei Santos",
+    "representative_name": "Ethan Chen",
+    "representative_capacity": "Executor",
+    "nonresident_alien": false,
+    "estate_ein_status": "present",
+    "destination_account": "DEST0006",
+    "destination_account_present": true,
+    "death_certificate_status": "present",
+    "letters_testamentary_status": "not_found",
+    "trust_document_status": "not_applicable",
+    "guardianship_document_status": "not_applicable",
+    "w8_ben_status": "not_applicable",
+    "signature_status": "present"
+  },
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_006",
+      "evidence": "Beneficiary intake record states 'Case: beneficiary_case_006'"
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0006",
+      "evidence": "Delivering Account Number field on page 1 shows TEST0006; confirmed on pages 2 and 3 footer"
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "estate",
+      "evidence": "Section 2B names 'Estate of Mei Santos'; intake record states 'Beneficiary type: Estate'"
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Estate of Mei Santos",
+      "evidence": "Name of Trust, Estate, or other Entity field reads 'Estate of Mei Santos'"
+    },
+    {
+      "field": "representative_name",
+      "value": "Ethan Chen",
+      "evidence": "Name of Trustee(s), Executor, Administrator field reads 'Ethan Chen'; signature page signed 'Ethan Chen'"
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Executor",
+      "evidence": "Intake record states 'Capacity: Executor'; form section 2B lists Ethan Chen as Executor/Administrator"
+    },
+    {
+      "field": "nonresident_alien",
+      "value": "false",
+      "evidence": "Intake record states 'US person: Yes' and 'Country of tax residence: United States'"
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "present",
+      "evidence": "Tax Identification Number (TIN-EIN) field in section 2B shows '00-0000006'"
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0006",
+      "evidence": "Option A Scenario 2 on page 2 shows transfer to LPL Beneficiary IRA account 'DEST0006'"
+    },
+    {
+      "field": "destination_account_present",
+      "value": "true",
+      "evidence": "Option A Scenario 2 selected with destination account 'DEST0006' entered"
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence": "Simulated death certificate page present in package; certification status states 'Certified copy supplied'"
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_found",
+      "evidence": "Form instructions require court-certified Letters of Testamentary for estate claims; no such document found in package"
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence": "Beneficiary is an estate, not a trust; trust document not required"
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence": "Beneficiary is an estate; no minor or conservatorship involved"
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence": "Representative confirmed as US person; W-8 BEN not required"
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence": "Page 3 signature section shows signed name 'Ethan Chen' with printed name 'Ethan Chen' and date '10/03/26'"
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "letters_testamentary_status",
+      "label": "Letters Testamentary Status",
+      "reason": "Form instructions require court-certified Letters of Testamentary for estate claims but no such document appears in the supplied package; absence confirmed by review but could be a separate submission"
+    },
+    {
+      "field": "destination_account",
+      "label": "Destination Account",
+      "reason": "Destination account 'DEST0006' appears to be a synthetic test value per document footer notation; real account validity cannot be confirmed from this document alone"
+    }
+  ],
+  "document_notes": [],
+  "decision_trace": [
+    {
+      "code": "MISSING_LETTERS_TESTAMENTARY",
+      "field": "letters_testamentary_status",
+      "fact_value": "not_found",
+      "evidence": "Form instructions require court-certified Letters of Testamentary for estate claims; no such document found in package",
+      "rule": "Estate beneficiary requires court-certified Letters of Testamentary.",
+      "result": "Estate beneficiary is missing court-certified Letters of Testamentary."
+    }
+  ],
+  "resolution_preview": [
+    {
+      "code": "MISSING_LETTERS_TESTAMENTARY",
+      "field": "letters_testamentary_status",
+      "title": "Estate beneficiary is missing court-certified Letters of Testamentary.",
+      "current_label": "Letters Testamentary",
+      "current_value": "Not Found",
+      "change_description": "If verified documentation changes letters testamentary to Present, this specific missing-document rule would no longer trigger.",
+      "effect": "Preview only. Other implemented requirements may still require attention, and this does not approve the claim."
+    }
+  ],
+  "filename": "beneficiary_case_006.pdf",
+  "upload": {
+    "original_mb": 4.91,
+    "transport_mb": 0.31,
+    "compression_mode": "browser_raster",
+    "target_mb": 0.35,
+    "download_url": "/cases/beneficiary_case_006/transport"
+  },
+  "analyzed_at": "2026-10-03T15:15:46.749458+00:00",
+  "request_id": "fe80406c",
+  "review_history": [],
+  "review_note": null,
+  "review_status": "awaiting_review",
+  "reviewed": false,
+  "reviewed_at": null
+}

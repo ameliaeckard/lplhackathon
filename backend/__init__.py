@@ -1,1 +1,1 @@
-"""Resolve live inference backend."""
+"""R'Solv live inference backend."""

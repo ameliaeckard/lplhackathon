@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+frontend/config.js
+frontend/vendor/*.js
+data/
+ml/models/*.joblib

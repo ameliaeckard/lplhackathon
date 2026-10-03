@@ -1,0 +1,151 @@
+{
+  "case_id": "beneficiary_case_008",
+  "workflow_type": "beneficiary_claim",
+  "workflow": "Beneficiary Claim",
+  "account_number": "TEST0008",
+  "beneficiary_name": "Noah Garcia",
+  "client": "Noah Garcia",
+  "status_code": "no_detected_exception",
+  "status": "No Detected Exception",
+  "decision_source": "deterministic_rules",
+  "human_review": true,
+  "issues": [],
+  "issue_codes": [],
+  "reason": "No exception was detected by the implemented deterministic checks.",
+  "summary": "R'Solv reviewed the beneficiary claim for Noah Garcia (individual child) and no exception was detected under the implemented checks; however, the death certificate on file is labeled as a synthetic training record and would require a genuine certified copy before this case moves to production processing.",
+  "summary_next_step": "Obtain and substitute a genuine certified death certificate in place of the synthetic training record currently on file.",
+  "summary_source": "claude_with_fallback",
+  "findings": [],
+  "recommended_actions": [],
+  "ml": {
+    "prediction": "no_detected_exception",
+    "model_score": 0.2963,
+    "score_note": "Experimental model score from the controlled synthetic training set. It is not a calibrated probability of real-world workflow failure.",
+    "agreement": true
+  },
+  "extraction": {
+    "beneficiary_type": "individual_child",
+    "beneficiary_name": "Noah Garcia",
+    "representative_name": null,
+    "representative_capacity": null,
+    "nonresident_alien": false,
+    "estate_ein_status": "not_applicable",
+    "destination_account": "DEST0008",
+    "destination_account_present": true,
+    "death_certificate_status": "present",
+    "letters_testamentary_status": "not_applicable",
+    "trust_document_status": "not_applicable",
+    "guardianship_document_status": "not_applicable",
+    "w8_ben_status": "not_applicable",
+    "signature_status": "present"
+  },
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_008",
+      "evidence": "Intake record header: 'Case: beneficiary_case_008'"
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0008",
+      "evidence": "Delivering Account Number field on page 1: TEST0008; repeated on pages 2 and 3 footer"
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual_child",
+      "evidence": "Section 2A: Relationship to Decedent field shows 'Child'; intake record: 'Beneficiary type: Child'; DOB 09/09/1978 confirms adult"
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Noah Garcia",
+      "evidence": "Section 2A Name field: 'Noah Garcia'; confirmed in signature block and intake record"
+    },
+    {
+      "field": "representative_name",
+      "value": null,
+      "evidence": "No representative listed; beneficiary is an adult individual acting on own behalf"
+    },
+    {
+      "field": "representative_capacity",
+      "value": null,
+      "evidence": "No representative capacity indicated in any section of the form"
+    },
+    {
+      "field": "nonresident_alien",
+      "value": "false",
+      "evidence": "Intake record: 'US person: Yes'; 'Country of tax residence: United States'; no W-8 BEN attached"
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence": "Claimant is an individual child beneficiary; Section 2B (trust/estate) is blank"
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0008",
+      "evidence": "Option A Scenario 1 on page 2: destination beneficiary IRA account entered as 'DEST0008'"
+    },
+    {
+      "field": "destination_account_present",
+      "value": "true",
+      "evidence": "Option A Scenario 1 selected and account number DEST0008 entered in the transfer field"
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence": "Simulated death certificate page present in package: 'Certification status in simulated case: Certified copy supplied'; decedent Fatima Clark, date of death 01/09/2026"
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence": "Claimant is an individual child beneficiary, not an estate executor; Section 2B blank"
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence": "No trust entity involved; Section 2B trust fields are blank"
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence": "Beneficiary DOB 09/09/1978 indicates adult; no minor or conservatorship indicated"
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence": "Intake record confirms US person; signature page certifies US person status; no W-8 BEN required"
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence": "Page 3 Section 4: signature line shows 'Noah Garcia' with printed name 'Noah Garcia' and date '10/03/26'"
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "death_certificate_status",
+      "label": "Death Certificate Status",
+      "reason": "Document is labeled 'SYNTHETIC TRAINING RECORD - NOT VALID'; treated as present for training purposes but would require a genuine certified copy in production"
+    }
+  ],
+  "document_notes": [],
+  "decision_trace": [],
+  "resolution_preview": [],
+  "analysis_run_id": "20261003T153915_225059Z_a9a714",
+  "filename": "beneficiary_case_008.pdf",
+  "upload": {
+    "original_mb": 4.91,
+    "transport_mb": 0.31,
+    "compression_mode": "browser_raster",
+    "target_mb": 0.35,
+    "download_url": "/cases/beneficiary_case_008/transport",
+    "archived_transport": "data/live_cases/transport_history/beneficiary_case_008/20261003T153915_225059Z_a9a714.pdf"
+  },
+  "analyzed_at": "2026-10-03T15:39:15.227142+00:00",
+  "request_id": "bdaf5098",
+  "review_history": [],
+  "review_note": null,
+  "reviewed": false,
+  "reviewed_at": null,
+  "review_status": "awaiting_review"
+}

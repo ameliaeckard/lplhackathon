@@ -1,0 +1,156 @@
+{
+  "case_id": "beneficiary_case_009",
+  "workflow_type": "beneficiary_claim",
+  "workflow": "Beneficiary Claim",
+  "account_number": "TEST0009",
+  "beneficiary_name": "Grace Walker",
+  "client": "Grace Walker",
+  "status_code": "no_detected_exception",
+  "status": "No Detected Exception",
+  "decision_source": "deterministic_rules",
+  "human_review": true,
+  "issues": [],
+  "issue_codes": [],
+  "reason": "No exception was detected by the implemented deterministic checks.",
+  "summary": "R'Solv found no exception under the implemented checks for Grace Walker's minor-beneficiary claim, with the death certificate and signature both present; however, two fields require manual review before the claim can move forward — the destination account (DEST0009) is flagged as a likely synthetic test value rather than a verified account number, and the guardianship document on file is explicitly labeled as a synthetic training record and not a valid court order.",
+  "summary_next_step": "Route to the claims operations team to obtain a verified destination account number and a valid, court-issued guardianship document before further processing.",
+  "summary_source": "claude_with_fallback",
+  "findings": [],
+  "recommended_actions": [],
+  "ml": {
+    "prediction": "no_detected_exception",
+    "model_score": 0.2963,
+    "score_note": "Experimental model score from the controlled synthetic training set. It is not a calibrated probability of real-world workflow failure.",
+    "agreement": true
+  },
+  "extraction": {
+    "beneficiary_type": "minor",
+    "beneficiary_name": "Grace Walker",
+    "representative_name": "Mei Morgan",
+    "representative_capacity": "Guardian",
+    "nonresident_alien": false,
+    "estate_ein_status": "not_applicable",
+    "destination_account": "DEST0009",
+    "destination_account_present": true,
+    "death_certificate_status": "present",
+    "letters_testamentary_status": "not_applicable",
+    "trust_document_status": "not_applicable",
+    "guardianship_document_status": "present",
+    "w8_ben_status": "not_applicable",
+    "signature_status": "present"
+  },
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_009",
+      "evidence": "Beneficiary intake record states 'Case: beneficiary_case_009'"
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0009",
+      "evidence": "Delivering Account Number field on page 1 shows TEST0009; confirmed on pages 2, 3, and supporting records"
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "minor",
+      "evidence": "Intake record states 'Beneficiary type: Child'; DOB 10/10/2015 confirms minor age; Letters of Guardianship issued for minor Grace Walker"
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Grace Walker",
+      "evidence": "Section 2A on page 1 lists Name: Grace Walker; confirmed in intake record and guardianship document"
+    },
+    {
+      "field": "representative_name",
+      "value": "Mei Morgan",
+      "evidence": "Signature page 3 shows 'SIMULATED TRAINING SIGNATURE - Guardian: Mei Morgan'; guardianship document lists 'Appointed guardian: Mei Morgan'"
+    },
+    {
+      "field": "representative_capacity",
+      "value": "Guardian",
+      "evidence": "Signature line on page 3 labeled 'Guardian'; Letters of Guardianship document confirms Mei Morgan as appointed guardian"
+    },
+    {
+      "field": "nonresident_alien",
+      "value": "false",
+      "evidence": "Intake record states 'US person: Yes' and 'Country of tax residence: United States'"
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence": "Claim is for a minor individual beneficiary, not an estate; Section B (trust/estate) left blank"
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0009",
+      "evidence": "Option A Scenario 1 on page 2 shows transfer to LPL beneficiary IRA account DEST0009"
+    },
+    {
+      "field": "destination_account_present",
+      "value": "true",
+      "evidence": "Account number DEST0009 entered in Option A Scenario 1 destination field on page 2"
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence": "Simulated death certificate record present in package; 'Certification status in simulated case: Certified copy supplied'"
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence": "No estate involved; beneficiary is a minor child with guardian, not an estate executor"
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence": "No trust entity named; Section B trust/estate fields left blank"
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "present",
+      "evidence": "Letters of Guardianship simulated supporting record present; names Mei Morgan as guardian for minor Grace Walker, appointed 09/15/2026"
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence": "Beneficiary is a US person per intake record; W-8 BEN not required"
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence": "Page 3 signature section shows signed name 'Mei Morgan' with printed name 'Mei Morgan' and date 10/03/26"
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "destination_account",
+      "label": "Destination Account",
+      "reason": "DEST0009 appears to be a synthetic test value per document footer notation; not a verified real account number"
+    },
+    {
+      "field": "guardianship_document_status",
+      "label": "Guardianship Document Status",
+      "reason": "Guardianship document is labeled 'SYNTHETIC TRAINING RECORD - NOT VALID' and explicitly noted as not an official court order; status recorded as present based on document inclusion in package"
+    }
+  ],
+  "document_notes": [],
+  "decision_trace": [],
+  "resolution_preview": [],
+  "analysis_run_id": "20261003T153225_660298Z_39fa29",
+  "filename": "beneficiary_case_009.pdf",
+  "upload": {
+    "original_mb": 4.91,
+    "transport_mb": 0.32,
+    "compression_mode": "browser_raster",
+    "target_mb": 0.35,
+    "download_url": "/cases/beneficiary_case_009/transport",
+    "archived_transport": "data/live_cases/transport_history/beneficiary_case_009/20261003T153225_660298Z_39fa29.pdf"
+  },
+  "analyzed_at": "2026-10-03T15:32:25.662266+00:00",
+  "request_id": "8a705168",
+  "review_history": [],
+  "review_note": null,
+  "reviewed": false,
+  "reviewed_at": null,
+  "review_status": "awaiting_review"
+}

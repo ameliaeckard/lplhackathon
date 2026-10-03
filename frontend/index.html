@@ -3,53 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>C.A.R.D | Case Automatic Review Dashboard</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>R'Solv | C.A.R.D.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 <header>
-  <div class="util"><div><span id="connection" class="connection">Checking Resolve API…</span></div></div>
-  <nav class="nav" aria-label="Primary"><div>
-    <span class="brand">r'Solv</span>
-    <ul>
-      <li><button type="button" data-nav="dashboard">Dashboard</button></li>
-      <li><button type="button" data-nav="cases">Cases</button></li>
-      <li><button type="button" data-nav="reports">Reports</button></li>
-      <li><button type="button" data-nav="settings">Settings</button></li>
-    </ul>
-  </div></nav>
-  <div class="hero"><div>
-    <div class="eyebrow">Case Automatic Review Dashboard</div>
-    <h1>C.A.R.D</h1>
-    <p class="subtitle" id="sub">Upload a beneficiary PDF to run live Claude extraction, deterministic checks, and the saved XGBoost model.</p>
-  </div></div>
+  <div class="utility-bar">
+    <div class="shell utility-inner">
+      <span>LPL University Hackathon · R'Solv prototype</span>
+      <span id="connection" class="connection">Checking R'Solv API…</span>
+    </div>
+  </div>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="shell nav-inner">
+      <button class="brand-button" type="button" data-nav="dashboard" aria-label="R'Solv dashboard">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-copy">
+          <strong>R'Solv</strong>
+          <small>C.A.R.D. · Case. Automatic. Review. Dashboard.</small>
+        </span>
+      </button>
+
+      <ul>
+        <li><button type="button" data-nav="dashboard">Dashboard</button></li>
+        <li><button type="button" data-nav="cases">Cases</button></li>
+        <li><button type="button" data-nav="reports">Reports</button></li>
+        <li><button type="button" data-nav="info">Info</button></li>
+        <li><button type="button" data-nav="settings">Settings</button></li>
+      </ul>
+    </div>
+  </nav>
 </header>
 
-<main>
-  <div class="view" data-view="dashboard">
-    <section class="card" aria-labelledby="upload-heading">
-      <h2 id="upload-heading">Analyze a beneficiary claim</h2>
-      <p class="muted">PDFs are sent to the live Resolve backend. The upload is processed temporarily and is not used to retrain the model.</p>
-      <form id="upload-form">
-        <div class="upload-row">
-          <input id="pdf-file" name="file" type="file" accept="application/pdf,.pdf" required aria-label="Choose beneficiary PDF">
-          <button id="analyze-btn" class="cta" type="submit">Analyze PDF</button>
+<main class="shell main-stack">
+  <div class="view page-stack" data-view="dashboard">
+    <section class="page-intro">
+      <div class="intro-copy">
+        <div class="section-kicker">C.A.R.D.</div>
+        <h1>Case. Automatic. Review. Dashboard.</h1>
+        <p class="muted" id="sub">Upload a beneficiary claim package to run the live R'Solv analysis pipeline.</p>
+      </div>
+      <button class="text-link" type="button" data-nav="info">How R'Solv works →</button>
+    </section>
+
+    <section class="upload-card" aria-labelledby="upload-heading">
+      <div class="upload-copy">
+        <div class="section-kicker">New analysis</div>
+        <h2 id="upload-heading">Analyze a beneficiary claim</h2>
+        <p class="muted">R'Solv prepares a small transport copy in your browser before upload, then C.A.R.D. checks explicit requirements, runs the saved ML model, and generates a short case summary.</p>
+      </div>
+
+      <form id="upload-form" class="upload-form">
+        <label class="file-picker" for="pdf-file">
+          <span class="file-icon" aria-hidden="true">PDF</span>
+          <span class="file-copy">
+            <b id="file-label">Choose a beneficiary PDF</b>
+            <small id="file-help">PDF only · checking live upload policy…</small>
+          </span>
+          <span class="choose-label">Browse</span>
+        </label>
+        <input id="pdf-file" name="file" type="file" accept="application/pdf,.pdf" required aria-label="Choose beneficiary PDF">
+        <div class="upload-actions">
+          <p id="upload-status" class="upload-status" role="status"></p>
+          <button id="analyze-btn" class="cta" type="submit">Analyze PDF <span aria-hidden="true">→</span></button>
         </div>
-        <p id="upload-status" class="upload-status" role="status"></p>
       </form>
     </section>
 
-    <section class="metrics" aria-label="Review totals">
-      <button type="button" class="metric" data-goto="All"><div class="metric-label">Cases analyzed</div><div class="metric-value" id="reviewed-count">0</div><small>View all →</small></button>
-      <button type="button" class="metric" data-goto="Needs Attention"><div class="metric-label">Needs attention</div><div class="metric-value" id="attention-count">0</div><small>View these →</small></button>
-      <button type="button" class="metric" data-goto="Human review"><div class="metric-label">Human review needed</div><div class="metric-value" id="human-count">0</div><small>View these →</small></button>
+    <section id="processing-panel" class="processing-panel" hidden aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <div class="processing-copy">
+        <div class="processing-topline">
+          <strong id="processing-stage">Preparing PDF</strong>
+          <span id="processing-elapsed">0s</span>
+        </div>
+        <p id="processing-file" class="muted">Preparing document…</p>
+        <div class="progress-track" aria-hidden="true"><i id="processing-progress"></i></div>
+        <div class="processing-flow" aria-label="Analysis pipeline">
+          <span>Prepare</span><i>→</i><span>Upload</span><i>→</i><span>Read</span><i>→</i><span>Check</span><i>→</i><span>Predict</span><i>→</i><span>Summarize</span>
+        </div>
+        <small class="muted">Compression and upload progress are real. Once upload completes, the backend terminal logs the exact C.A.R.D. analysis stage.</small>
+      </div>
     </section>
 
-    <section class="card" style="margin-top:24px">
-      <h2>Needs attention</h2>
+    <section class="metrics" aria-label="Review totals">
+      <button type="button" class="metric" data-goto="All">
+        <div class="metric-label">Cases analyzed</div>
+        <div class="metric-value" id="reviewed-count">0</div>
+        <small>View all cases</small>
+      </button>
+      <button type="button" class="metric" data-goto="Needs Attention">
+        <div class="metric-label">Needs attention</div>
+        <div class="metric-value" id="attention-count">0</div>
+        <small>Review exceptions</small>
+      </button>
+      <button type="button" class="metric" data-goto="Awaiting Human Review">
+        <div class="metric-label">Awaiting human review</div>
+        <div class="metric-value" id="human-count">0</div>
+        <small>Open review queue</small>
+      </button>
+    </section>
+
+    <section class="card card-stack">
+      <div class="section-heading">
+        <div class="heading-copy">
+          <div class="section-kicker">Priority queue</div>
+          <h2>Needs attention</h2>
+        </div>
+        <button class="text-link" type="button" data-nav="cases">View all cases →</button>
+      </div>
       <div class="table-container"><table>
         <thead><tr><th scope="col">Case</th><th scope="col">Workflow</th><th scope="col">Beneficiary / Entity</th><th scope="col">Status</th><th scope="col">Issues</th></tr></thead>
         <tbody id="dash-table"></tbody>
@@ -57,11 +129,13 @@
     </section>
   </div>
 
-  <div class="view" data-view="cases" hidden>
-    <section class="card">
-      <h2>Analyzed cases</h2>
+  <div class="view page-stack" data-view="cases" hidden>
+    <section class="page-intro">
+      <div class="intro-copy"><div class="section-kicker">Case history</div><h1>Cases</h1><p class="muted">Review cases analyzed through C.A.R.D.</p></div>
+    </section>
+    <section class="card card-stack">
       <div class="tools">
-        <input type="search" id="q" placeholder="Search by case, beneficiary or workflow  ( / )" aria-label="Search cases">
+        <input type="search" id="q" placeholder="Search case, beneficiary, workflow or account" aria-label="Search cases">
         <div class="seg" id="filters" role="group" aria-label="Filter cases"></div>
       </div>
       <div class="table-container"><table>
@@ -77,44 +151,137 @@
     </section>
   </div>
 
-  <div class="view" data-view="reports" hidden>
-    <div class="grid2">
-      <section class="card"><h2>Cases by status</h2><div class="bars" id="by-status"></div></section>
-      <section class="card"><h2>Cases by workflow</h2><div class="bars" id="by-workflow"></div></section>
+  <div class="view page-stack" data-view="reports" hidden>
+    <section class="page-intro">
+      <div class="intro-copy"><div class="section-kicker">Operational view</div><h1>Reports</h1><p class="muted">A lightweight summary of live cases processed through C.A.R.D.</p></div>
+    </section>
+    <div class="report-row">
+      <section class="card card-stack report-card"><div class="section-kicker">Operations</div><h2>Cases by status</h2><div class="bars" id="by-status"></div></section>
+      <section class="card card-stack report-card"><div class="section-kicker">Operations</div><h2>Cases by workflow</h2><div class="bars" id="by-workflow"></div></section>
     </div>
-    <section class="card"><h2>Most common issues</h2><div class="bars" id="by-issue"></div></section>
+    <section class="card card-stack"><div class="section-kicker">Exceptions</div><h2>Most common issues</h2><div class="bars" id="by-issue"></div></section>
   </div>
 
-  <div class="view" data-view="settings" hidden>
-    <section class="card">
-      <h2>Settings</h2>
-      <div class="set-row"><b>Theme</b><p class="muted">Light is the default.</p>
+  <div class="view page-stack" data-view="info" hidden>
+    <section class="page-intro">
+      <div class="intro-copy">
+        <div class="section-kicker">About R'Solv</div>
+        <h1>How C.A.R.D. works</h1>
+        <p class="muted">R'Solv is the startup. C.A.R.D. is its Case. Automatic. Review. Dashboard. technology for surfacing beneficiary-case blockers before they stall a workflow.</p>
+      </div>
+    </section>
+
+    <section class="pipeline" aria-label="C.A.R.D. pipeline">
+      <div class="pipeline-step">
+        <div class="pipeline-rail"><span>01</span><i></i></div>
+        <div class="pipeline-content">
+          <div class="section-kicker">Read</div>
+          <h2>Understand the document package</h2>
+          <p>Claude through Amazon Bedrock reads the beneficiary PDF and extracts the structured facts C.A.R.D. needs. The model is instructed to extract evidence, not decide whether a case is approved.</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-rail"><span>02</span><i></i></div>
+        <div class="pipeline-content">
+          <div class="section-kicker">Check</div>
+          <h2>Apply explicit requirements</h2>
+          <p>Deterministic Python rules check known requirements such as death certificates, estate EINs, signatures, and Letters of Testamentary. These rules remain authoritative for explicit requirements.</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-rail"><span>03</span><i></i></div>
+        <div class="pipeline-content">
+          <div class="section-kicker">Predict</div>
+          <h2>Add an ML signal</h2>
+          <p>The saved XGBoost model provides a secondary exception signal learned from the controlled synthetic beneficiary dataset. It never overrides an explicit deterministic requirement.</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-rail"><span>04</span><i></i></div>
+        <div class="pipeline-content">
+          <div class="section-kicker">Explain</div>
+          <h2>Turn the result into an operational next step</h2>
+          <p>Claude receives only the already-structured facts and rule findings, then produces a short human-readable summary. It cannot change the rule result or invent missing evidence.</p>
+        </div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-rail"><span>05</span></div>
+        <div class="pipeline-content">
+          <div class="section-kicker">Review</div>
+          <h2>Keep the human in control</h2>
+          <p>C.A.R.D. surfaces Needs Attention, No Detected Exception, or Unable to Determine. It does not declare a claim legally approved or compliant, and uncertain or conflicting signals stay visible for human review.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-note">
+      <strong>Prototype boundary</strong>
+      <p>The current XGBoost evaluation uses controlled synthetic beneficiary cases. Live uploads are inference-only and do not retrain the model. In production, the same architecture could use historical operational outcomes as the ML target.</p>
+    </section>
+  </div>
+
+  <div class="view page-stack" data-view="settings" hidden>
+    <section class="page-intro">
+      <div class="intro-copy"><div class="section-kicker">Configuration</div><h1>Settings</h1><p class="muted">Connection, theme, upload behavior, and live case history.</p></div>
+    </section>
+    <section class="card settings-stack">
+      <div class="set-row"><div class="setting-copy"><b>Theme</b><p class="muted">Light is the default.</p></div>
         <div class="seg" role="group" aria-label="Theme">
           <button type="button" data-theme-pick="light">Light</button>
           <button type="button" data-theme-pick="dark">Dark</button>
           <button type="button" data-theme-pick="system">Match device</button>
-        </div></div>
-      <div class="set-row"><b>Resolve API</b><p class="muted" id="api-location"></p><button type="button" class="cta ghost" id="check-api">Check connection</button></div>
-      <div class="set-row"><b>Live case history</b><p class="muted">Clears only cases analyzed through the live dashboard. Training PDFs, datasets, and the trained model are untouched.</p><button type="button" class="cta ghost" id="clear-cases">Clear analyzed cases</button></div>
-      <div class="set-row"><b>Keyboard shortcuts</b><p class="muted"><kbd>/</kbd> search cases &nbsp; <kbd>1</kbd>–<kbd>4</kbd> switch pages &nbsp; <kbd>Esc</kbd> leave a field</p></div>
+        </div>
+      </div>
+      <div class="set-row"><div class="setting-copy"><b>R'Solv API</b><p class="muted" id="api-location"></p></div><button type="button" class="cta secondary" id="check-api">Check connection</button></div>
+      <div class="set-row"><div class="setting-copy"><b>Upload handling</b><p class="muted" id="upload-policy">Checking live API upload policy…</p></div></div>
+      <div class="set-row"><div class="setting-copy"><b>Live case history</b><p class="muted">Clears only cases analyzed through the live dashboard. Training PDFs, datasets, and the trained model are untouched.</p></div><button type="button" class="cta secondary danger-outline" id="clear-cases">Clear analyzed cases</button></div>
+      <div class="set-row"><div class="setting-copy"><b>Keyboard shortcuts</b><p class="muted"><kbd>/</kbd> search cases &nbsp; <kbd>1</kbd>–<kbd>5</kbd> switch pages &nbsp; <kbd>Esc</kbd> leave a field</p></div></div>
     </section>
   </div>
 
-  <section class="card view" data-view="dashboard cases" aria-labelledby="detail-heading" style="margin-top:24px" id="detail-card" hidden>
-    <h2 id="detail-heading">Case details</h2>
-    <div id="case-detail" class="muted">Analyze or select a case to see its details.</div>
-    <div class="btns" style="margin-top:18px">
-      <button type="button" class="cta ghost" id="mark-reviewed" disabled>Mark reviewed</button>
+  <section class="card card-stack view detail-card" data-view="dashboard cases" aria-labelledby="detail-heading" id="detail-card" hidden>
+    <div class="section-kicker">Case intelligence</div>
+    <div class="detail-title-row">
+      <h2 id="detail-heading">Case details</h2>
+      <span id="detail-review-badge"></span>
     </div>
+
+    <div id="case-detail" class="muted">Analyze or select a case to see its details.</div>
+
+    <section id="human-review-panel" class="human-review-panel" hidden>
+      <div class="review-panel-copy">
+        <div class="section-kicker">Human review</div>
+        <h3>Record the operational outcome</h3>
+        <p class="muted" id="review-help">Choose how the reviewer wants this case to proceed.</p>
+      </div>
+
+      <label class="review-note-label" for="review-note">
+        Reviewer note
+        <textarea id="review-note" rows="3" maxlength="600" placeholder="Optional note about what was verified or what follow-up is needed."></textarea>
+      </label>
+
+      <div class="btns" id="review-actions">
+        <button type="button" class="cta review-followup" data-review-action="follow_up_required">Follow-up Required</button>
+        <button type="button" class="cta review-ready" data-review-action="ready_to_continue">Ready to Continue</button>
+        <button type="button" class="cta secondary" data-review-action="awaiting_review">Return to Review Queue</button>
+      </div>
+
+      <div id="review-history" class="review-history"></div>
+    </section>
   </section>
 </main>
 
-<footer><div>
-  <p>Live results from the Resolve backend. No sample case data is embedded in this frontend.</p>
-  <p>Hackathon prototype. Styling inspired by LPL Financial's public website; not an official LPL product.</p>
-</div></footer>
+<footer>
+  <div class="shell footer-row">
+    <div class="footer-copy"><strong>R'Solv</strong><p>C.A.R.D. · Case. Automatic. Review. Dashboard.</p></div>
+    <div class="footer-copy"><p>Hackathon prototype. Visual language is inspired by LPL Financial's public brand and is not an official LPL product.</p><p>Live uploads are used for inference only and do not retrain the model.</p></div>
+  </div>
+</footer>
+
 <div id="toast" role="status"></div>
+<script src="vendor/pdf.min.js?v=1"></script>
+<script src="vendor/jspdf.umd.min.js?v=1"></script>
 <script src="config.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>

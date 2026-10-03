@@ -1,0 +1,149 @@
+{
+  "case_id": "beneficiary_case_005",
+  "workflow_type": "beneficiary_claim",
+  "workflow": "Beneficiary Claim",
+  "account_number": "TEST0005",
+  "beneficiary_name": "Sofia Williams",
+  "client": "Sofia Williams",
+  "status_code": "no_detected_exception",
+  "status": "No Detected Exception",
+  "decision_source": "deterministic_rules",
+  "human_review": true,
+  "issues": [],
+  "issue_codes": [],
+  "reason": "No exception was detected by the implemented deterministic checks.",
+  "summary": "R'Solv reviewed the beneficiary claim for Sofia Williams (individual child) and found no exception under the implemented checks; however, the destination account field remains unresolved because DEST0005 appears to be a synthetic test value and real account number validity cannot be confirmed from the submitted document alone.",
+  "summary_next_step": "Obtain and verify a valid destination account number for Sofia Williams before advancing the claim.",
+  "summary_source": "claude_with_fallback",
+  "findings": [],
+  "recommended_actions": [],
+  "ml": {
+    "prediction": "no_detected_exception",
+    "model_score": 0.2963,
+    "score_note": "Experimental model score from the controlled synthetic training set. It is not a calibrated probability of real-world workflow failure.",
+    "agreement": true
+  },
+  "extraction": {
+    "beneficiary_type": "individual_child",
+    "beneficiary_name": "Sofia Williams",
+    "representative_name": null,
+    "representative_capacity": null,
+    "nonresident_alien": false,
+    "estate_ein_status": "not_applicable",
+    "destination_account": "DEST0005",
+    "destination_account_present": true,
+    "death_certificate_status": "present",
+    "letters_testamentary_status": "not_applicable",
+    "trust_document_status": "not_applicable",
+    "guardianship_document_status": "not_applicable",
+    "w8_ben_status": "not_applicable",
+    "signature_status": "present"
+  },
+  "evidence": [
+    {
+      "field": "case_id",
+      "value": "beneficiary_case_005",
+      "evidence": "Intake record header: 'Case: beneficiary_case_005'"
+    },
+    {
+      "field": "account_number",
+      "value": "TEST0005",
+      "evidence": "Deceased IRA Owner section: Delivering Account Number = TEST0005; repeated in footer of pages 2 and 3"
+    },
+    {
+      "field": "beneficiary_type",
+      "value": "individual_child",
+      "evidence": "Section 2A: Relationship to Decedent = 'Child'; intake record: 'Beneficiary type: Child', 'Capacity: Individual'"
+    },
+    {
+      "field": "beneficiary_name",
+      "value": "Sofia Williams",
+      "evidence": "Section 2A Name field: 'Sofia Williams'; confirmed in signature block and intake record"
+    },
+    {
+      "field": "representative_name",
+      "value": null,
+      "evidence": "No trustee, executor, guardian, or other representative named; beneficiary acts in individual capacity"
+    },
+    {
+      "field": "representative_capacity",
+      "value": null,
+      "evidence": "No representative capacity indicated; Section B (trust/estate) left blank"
+    },
+    {
+      "field": "nonresident_alien",
+      "value": "false",
+      "evidence": "Intake record: 'US person: Yes', 'Country of tax residence: United States'; no W-8 BEN attached"
+    },
+    {
+      "field": "estate_ein_status",
+      "value": "not_applicable",
+      "evidence": "Claimant is an individual child, not an estate; Section B left blank"
+    },
+    {
+      "field": "destination_account",
+      "value": "DEST0005",
+      "evidence": "Option A Scenario 1: transfer to LPL beneficiary IRA account 'DEST0005'"
+    },
+    {
+      "field": "destination_account_present",
+      "value": "true",
+      "evidence": "Option A Scenario 1 selected with destination account DEST0005 entered"
+    },
+    {
+      "field": "death_certificate_status",
+      "value": "present",
+      "evidence": "Simulated death certificate page present: 'Certification status in simulated case: Certified copy supplied', decedent Lucas Reed, account TEST0005"
+    },
+    {
+      "field": "letters_testamentary_status",
+      "value": "not_applicable",
+      "evidence": "No estate claim; individual child beneficiary acting in personal capacity"
+    },
+    {
+      "field": "trust_document_status",
+      "value": "not_applicable",
+      "evidence": "No trust entity involved; Section B (trust/estate) left blank"
+    },
+    {
+      "field": "guardianship_document_status",
+      "value": "not_applicable",
+      "evidence": "Beneficiary DOB 06/06/1975; adult individual, no minor or conservatorship indicated"
+    },
+    {
+      "field": "w8_ben_status",
+      "value": "not_applicable",
+      "evidence": "Beneficiary confirmed as US person; W-8 BEN not required"
+    },
+    {
+      "field": "signature_status",
+      "value": "present",
+      "evidence": "Page 3 signature section: simulated signature 'Sofia Williams', printed name 'Sofia Williams', date '10/03/26'"
+    }
+  ],
+  "uncertainties": [
+    {
+      "field": "destination_account",
+      "label": "Destination Account",
+      "reason": "DEST0005 appears to be a synthetic test value; real account number validity cannot be confirmed from this document alone"
+    }
+  ],
+  "document_notes": [],
+  "decision_trace": [],
+  "resolution_preview": [],
+  "filename": "beneficiary_case_005.pdf",
+  "upload": {
+    "original_mb": 4.91,
+    "transport_mb": 0.31,
+    "compression_mode": "browser_raster",
+    "target_mb": 0.35,
+    "download_url": "/cases/beneficiary_case_005/transport"
+  },
+  "analyzed_at": "2026-10-03T15:07:30.915188+00:00",
+  "request_id": "d8527fec",
+  "review_history": [],
+  "review_note": null,
+  "review_status": "awaiting_review",
+  "reviewed": false,
+  "reviewed_at": null
+}
