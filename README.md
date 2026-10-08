@@ -1,5 +1,7 @@
 # R'Solv _(lplhackathon)_
 
+Lab report: [R'Solv](https://lab.ameliaeckard.com/notes/2026-10-08-rsolv)
+
 A human-in-the-loop exception review prototype combining document AI, explicit rules, and a secondary ML signal.
 
 ## Background
@@ -55,7 +57,3 @@ The system does not make legal or financial approval decisions. Final review rem
 ## Contributing
 
 Issues are welcome for bugs or documentation problems. Please open an issue before a substantial pull request.
-
-## License
-
-UNLICENSED © Amelia Eckard.
