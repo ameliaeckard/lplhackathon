@@ -50,9 +50,14 @@ Human review
 
 The system does not make legal or financial approval decisions. Final review remains with a person.
 
-## Maintainer
+## Project Team
 
-[Amelia Eckard](https://github.com/ameliaeckard)
+R'Solv was developed collaboratively for the LPL Financial University Hackathon by:
+
+- [Amelia Eckard](https://github.com/ameliaeckard)
+- [priyapo](https://github.com/priyapo)
+- [j-pegu](https://github.com/j-pegu)
+- [MKHunt-bit](https://github.com/MKHunt-bit)
 
 ## Contributing
 
