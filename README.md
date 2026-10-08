@@ -1,72 +1,61 @@
-# R'Solv
+# R'Solv _(lplhackathon)_
 
-R'Solv is an AI-powered exception review tool for beneficiary claim processing.
+A human-in-the-loop exception review prototype combining document AI, explicit rules, and a secondary ML signal.
 
-## What it does
+## Background
 
-R'Solv:
+R'Solv was built for the LPL Financial University Hackathon. It separates fuzzy document understanding from deterministic requirement checks instead of asking one model to make the entire decision.
 
-- Reads beneficiary claim PDFs with Claude through Amazon Bedrock
-- Extracts structured case information
-- Checks explicit requirements with deterministic rules
-- Runs an XGBoost model as a secondary signal
-- Shows when the rules and ML model disagree
-- Keeps a human reviewer in control
+## Install
 
-## How it works
+```bash
+git clone https://github.com/ameliaeckard/lplhackathon.git
+cd lplhackathon
+pip install -r requirements.txt
+```
+
+Amazon Bedrock credentials and model access are required for document extraction.
+
+## Usage
+
+Start the backend:
+
+```bash
+python backend/app.py
+```
+
+Serve the frontend:
+
+```bash
+python -m http.server 5506 --directory frontend
+```
+
+## Architecture
 
 ```text
 PDF
-↓
+ ↓
 Claude / Amazon Bedrock
-↓
+ ↓
 Structured case facts
-↓
+ ↓
 Deterministic rules + XGBoost
-↓
-Case result and explanation
-↓
+ ↓
+Explanation and disagreement signals
+ ↓
 Human review
 ```
 
-The LLM understands the document.
+The system does not make legal or financial approval decisions. Final review remains with a person.
 
-The deterministic rules check explicit requirements.
+## Maintainer
 
-The ML model runs alongside the rules as an additional signal.
+[Amelia Eckard](https://github.com/ameliaeckard)
 
-## C.A.R.D.
+## Contributing
 
-R'Solv is powered by **C.A.R.D.**
+Issues are welcome for bugs or documentation problems. Please open an issue before a substantial pull request.
 
-**Case. Automatic. Review. Dashboard.**
+## License
 
-## Technology
-
-- Python
-- Flask
-- JavaScript
-- Amazon Bedrock
-- Claude
-- XGBoost
-- HTML / CSS
-
-## Run the project
-
-Backend:
-
-```bash
-cd /workshop
-python3 backend/app.py
-```
-
-Frontend:
-
-```bash
-cd /workshop
-python3 -m http.server 5506 --directory frontend
-```
-
-## Note
-
-R'Solv is a hackathon prototype. It does not make legal or financial approval decisions. Humans remain in control of review decisions.
+UNLICENSED © Amelia Eckard.
